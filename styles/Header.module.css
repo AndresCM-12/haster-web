@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  row-gap: 20px;
+}
+
+.li {
+  list-style: none;
+  display: inline-block;
+}
