@@ -1,22 +1,75 @@
 @import "../../../styles/shared.scss";
 
-.MainWrapper {
-  height: 540px;
-  background-color: $background-secondary;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  .textWrapper {
-    justify-self: flex-start;
-    align-self: center;
-    h1 {
-      font-size: $h1;
-      color: $color-primary;
+.mainWrapperContact {
+  padding: $padding;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.textWrapper {
+  h1 {
+    font-size: 70px;
+    color: $color-secondary;
+    font-weight: 700;
+  }
+  .section {
+    margin-top: 40px;
+  }
+  .icon{
+    margin-bottom: 8px;
+  }
+  p {
+    strong{
       font-weight: 700;
     }
+    font-size: $h4;
+    color: $color-secondary;
   }
-  @media screen and (max-width: 875px) {
-    padding: $padding;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+}
+
+.contactWrapper {
+  padding: 98px 70px;
+  background-color: $background-tertiary;
+  margin-top: -170px;
+  width: 90%;
+  max-width: 812px;
+  h1 {
+    font-size: 3.2rem;
+    color: $color-secondary;
+    font-weight: 700;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    row-gap: 12px;
+    label {
+      font-size: $h4;
+      color: $color-secondary;
+      font-weight: 700;
+    }
+    button {
+      background-color: $background-secondary;
+      color: $color-primary;
+      font-size: $h5;
+      font-weight: 700;
+      padding: 10px;
+      border: none;
+      margin-top: 43px;
+      width: 130px;
+      cursor: pointer;
+    }
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: $background-tertiary;
+    }
+    input.message{
+      height: 231px;
+    }
+    input::placeholder {
+      color: $color-secondary;
+    }
   }
 }

@@ -1,13 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
+import { Router, useRouter } from "next/router";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const router = useRouter();
   return (
     <>
       <header id="globalHeader">
-        <div className="logo--wrapper">
+        <div
+          className="logo--wrapper"
+          onClick={() => {
+            router.push("/");
+          }}
+        >
           <Isotype />
         </div>
 
@@ -22,14 +29,19 @@ const Header = () => {
             <Link className="links" href={"/contacto"}>
               <li>CONTACTO</li>
             </Link>
-            <Link className="links" href={"/servicios"}>
+            <Link className="links" href={"/rastreo"}>
               <li>RASTREAR MI PAQUETE</li>
             </Link>
           </ul>
         </nav>
 
         <div className="right--section--wrapper">
-          <div className="button">
+          <div
+            className="button"
+            onClick={() => {
+              router.push("/contacto");
+            }}
+          >
             <p>Solicitar cotización</p>
           </div>
           <div className="right--section--wrapper--icon">
@@ -70,7 +82,7 @@ const Header = () => {
               <Link className="links" href={"/servicios"}>
                 <li>CONTACTO</li>
               </Link>
-              <Link className="links" href={"/servicios"}>
+              <Link className="links" href={"/rastreo"}>
                 <li>RASTREAR</li>
               </Link>
             </ul>
