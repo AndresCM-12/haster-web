@@ -1,0 +1,33 @@
+@import "../../../styles/shared.scss";
+
+.mainWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  .leftWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: $padding;
+    padding-inline-start: calc($padding * 2);
+    background-color: $background-secondary;
+    height: 800px;
+
+    h1 {
+      font-size: 80px;
+      font-weight: 700;
+      color: $color-primary;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: $h4;
+      color: $color-primary;
+      font-weight: 400;
+      max-width: 500px;
+    }
+  }
+  .image {
+    height: 800px;
+    background-color: $color-tertiary;
+  }
+}

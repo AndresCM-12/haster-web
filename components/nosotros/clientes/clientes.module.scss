@@ -1,0 +1,79 @@
+@import "../../../styles/shared.scss";
+
+.mainWrapper {
+  background-color: $background-primary;
+  padding: calc($padding * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 40px;
+}
+
+.clientsSwiper {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  column-gap: 20px;
+  position: relative;
+  .mySwiper {
+    width: 80%;
+  }
+}
+
+.textWrapper {
+  margin-bottom: 80px;
+  p {
+    font-size: $h4;
+    color: $color-secondary;
+    font-weight: 700;
+    text-align: center;
+  }
+  h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: $color-secondary;
+    text-align: center;
+  }
+}
+
+.swiperButtonPrev {
+  border: 2px solid $color-tertiary;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  font-weight: 400;
+  font-size: 30px;
+  @media screen and (max-width: 1150px) {
+    position: absolute;
+    bottom: -140px;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+}
+
+.swiperButtonNext {
+  border: 2px solid $color-tertiary;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  font-weight: 400;
+  font-size: 30px;
+  @media screen and (max-width: 1150px) {
+    position: absolute;
+    bottom: -140px;
+    right: 30%;
+    transform: translateX(50%);
+  }
+}
+
+.imgContainer {
+  background-color: gray;
+  width: 300px;
+  height: 100px;
+}

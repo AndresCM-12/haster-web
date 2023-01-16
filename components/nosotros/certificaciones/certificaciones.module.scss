@@ -1,0 +1,41 @@
+@import "../../../styles/shared.scss";
+
+.mainWrapper {
+  background-color: $background-tertiary;
+  padding: calc($padding * 2);
+  display: flex;
+  column-gap: 40px;
+  @media screen and (max-width: 1150px) {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}
+
+.titleWrapper {
+  p {
+    font-size: $h5;
+    color: $color-secondary;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: $color-secondary;
+  }
+}
+
+.separator {
+  width: 1px;
+  height: 94px;
+  background-color: $color-tertiary;
+  @media screen and (max-width: 720px) {
+    height: 0px;
+  }
+}
+
+.certificacionesWrapper {
+  p {
+    font-size: $h4;
+    color: $color-secondary;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../../styles/shared.scss";
+
+.mainWrapper {
+  margin-inline: $padding;
+  background-color: $background-tertiary;
+  margin-top: -80px;
+  padding: $padding;
+}
+
+.valoresWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
+
+  .images {
+    height: 80px;
+    width: 80px;
+    display: grid;
+    place-items: center;
+    svg {
+      height: 100%;
+      width: 100%;
+    }	
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 40px;
+  }
+
+  .valor {
+    h5 {
+      font-size: $h3;
+      font-weight: 700;
+      color: $color-secondary;
+      margin-block: 20px;
+    }
+
+    h6 {
+      font-size: $h4;
+      color: $color-secondary;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: $h5;
+      color: $color-secondary;
+      max-width: 380px;
+    }
+    ul {
+      list-style: none;
+      padding-inline: 0;
+      li {
+        font-size: $h5;
+        color: $color-secondary;
+        span {
+          color: $color-tertiary;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

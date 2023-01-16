@@ -1,0 +1,41 @@
+@import "../../styles/shared.scss";
+.mainBanner {
+  height: 880px;
+  width: 100%;
+  background-color: burlywood;
+  background-image: url("../../public/images/HomeBanner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  div {
+    h1 {
+      font-size: $h1;
+      color: $color-primary;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    h6 {
+      font-size: $h5;
+      color: $color-primary;
+      font-weight: 400;
+      max-width: 420px;
+      margin-bottom: 40px;
+    }
+    div {
+      padding: 8px 28px;
+      border: 1px solid $color-primary;
+      width: fit-content;
+      cursor: pointer;
+      p{
+        width: fit-content;
+        font-size: $h2;
+        color: $color-primary;
+        font-weight: 700;
+      }
+    }
+  }
+}
