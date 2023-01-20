@@ -2,7 +2,14 @@
 
 .mainWrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../../public/images/nosotros_historia_banner.png");
+  @media screen and (max-width: 950px) {
+    grid-template-columns: 1fr;
+  }
   .leftWrapper {
     display: flex;
     flex-direction: column;
@@ -10,9 +17,14 @@
     align-items: flex-start;
     padding: $padding;
     padding-inline-start: calc($padding * 2);
-    background-color: $background-secondary;
+    background-color: #2f2e64ea;
     height: 800px;
-
+    @media screen and (max-width: 1150px) {
+      padding-inline-start: $padding;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 20px;
+    }
     h1 {
       font-size: 80px;
       font-weight: 700;
@@ -28,6 +40,9 @@
   }
   .image {
     height: 800px;
-    background-color: $color-tertiary;
+    background-color: transparent;
+    @media screen and (max-width: 950px) {
+      display: none;
+    }
   }
 }

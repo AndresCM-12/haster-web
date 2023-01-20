@@ -74,7 +74,10 @@ const ServiceSlideComponent = ({ serviceSlide, order }) => {
   return (
     <>
       {order === "left" ? (
-        <div className={styles.slideWrapper}>
+        <div
+          className={styles.slideWrapper}
+          style={{ backgroundImage: `url('${serviceSlide.image}')` }}
+        >
           <div className={styles.textWrapper}>
             <div className={styles.icon}>
               <svg
@@ -109,15 +112,14 @@ const ServiceSlideComponent = ({ serviceSlide, order }) => {
             <p>{serviceSlide.text}</p>
             <div className={styles.button}>Conoce más</div>
           </div>
-          <div>
-            <img src={serviceSlide.image} alt={serviceSlide.name} />
-          </div>
+          <div className={styles.transparent}></div>
         </div>
       ) : (
-        <div className={styles.slideWrapper}>
-          <div>
-            <img src={serviceSlide.image} alt={serviceSlide.name} />
-          </div>
+        <div
+          className={styles.slideWrapper}
+          style={{ backgroundImage: `url('${serviceSlide.image}')` }}
+        >
+          <div className={styles.transparent}></div>
           <div className={styles.textWrapper}>
             <div className={styles.icon}>
               <svg

@@ -1,7 +1,7 @@
 @import "../../../styles/shared.scss";
 
 .wrapperForm {
-  background-image: url('../../../public/images/HomeContactImage.png');
+  background-image: url("../../../public/images/HomeContactImage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,14 +11,21 @@
   align-items: flex-end;
   .background {
     padding: 32px;
+    background-color: white;
+    width: 40%;
+    @media screen and (max-width: 950px) {
+      width: 60%;
+    }
+    @media screen and (max-width: 650px) {
+      width: 80%;
+    }
     h1 {
       font-size: $h3;
       color: $color-secondary;
       margin-bottom: 32px;
       font-weight: 700;
     }
-    background-color: white;
-    width: 40%;
+
     .Form {
       display: flex;
       flex-direction: column;
@@ -56,6 +63,12 @@
   margin-bottom: 24px;
   .Map {
     width: 40%;
+    @media screen and (max-width: 950px) {
+      width: 60%;
+    }
+    @media screen and (max-width: 650px) {
+      width: 80%;
+    }
     height: 240px;
     background-color: $background-tertiary;
     iframe {
@@ -68,14 +81,18 @@
     display: flex;
     column-gap: 40px;
     align-items: center;
-    h3{
-        font-size: $h5;
-        color: $color-secondary;
-        font-weight: 700;
+    max-width: 80%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    h3 {
+      font-size: $h5;
+      color: $color-secondary;
+      font-weight: 700;
     }
-    p{
-        font-size: $h5;
-        color: $color-secondary;
+    p {
+      font-size: $h5;
+      color: $color-secondary;
     }
   }
 }

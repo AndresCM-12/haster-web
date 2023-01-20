@@ -16,13 +16,14 @@ const HomeMainServices = () => {
       <div className={styles.button}>Ver todos los servicios</div>
 
       <Swiper
+        id="swiperServices"
         className="swiperServices"
         onInit={(ev) => {
           set_my_swiper(ev);
         }}
         modules={[Scrollbar, A11y]}
         navigation={{ nextEl: "#nextArrow" }}
-        spaceBetween={50}
+        spaceBetween={25}
         slidesPerView={"auto"}
       >
         <SwiperSlide className={styles.slide}>
@@ -73,12 +74,36 @@ const HomeMainServices = () => {
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.serviceCard}>
+            <img
+              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
+              alt="camiones"
+            />
+            <div className={styles.textWrapper}>
+              <h2>Fletes de Importación y Exportación.</h2>
+              <p>Conoce más</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.serviceCard}>
+            <img
+              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
+              alt="camiones"
+            />
+            <div className={styles.textWrapper}>
+              <h2>Fletes de Importación y Exportación.</h2>
+              <p>Conoce más</p>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
       <div
+        className={styles.swiperButton}
         onClick={() => {
           my_swiper.slideNext();
         }}
-        className={styles.swiperButton}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -11,6 +11,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  .emptyDiv {
+    @media screen and (max-width: 870px) {
+      display: none;
+    }
+  }
   div {
     h1 {
       font-size: $h1;
@@ -19,7 +24,7 @@
       margin-bottom: 20px;
     }
     h6 {
-      font-size: $h5;
+      font-size: $h4;
       color: $color-primary;
       font-weight: 400;
       max-width: 420px;
@@ -30,12 +35,18 @@
       border: 1px solid $color-primary;
       width: fit-content;
       cursor: pointer;
-      p{
+      p {
         width: fit-content;
         font-size: $h2;
         color: $color-primary;
         font-weight: 700;
       }
     }
+  }
+}
+@media screen and (max-width: 870px) {
+  .mainBanner {
+    grid-template-columns: 1fr;
+    padding: 20px;
   }
 }

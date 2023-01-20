@@ -6,27 +6,18 @@ const Historia = () => {
       <div className={styles.leftWrapper}>
         <h1>Historia</h1>
         <p>
-          La empresa Haster Logística S. de R.L. de C.V. inició el 3 de marzo
-          del 2010, con su primer vehículo, al principio solo se dedicaba al
-          transporte local de mercancía cinco años más tarde el fundador de la
-          compañía Jose Luis García, compra su primer camión realizando
-          movimientos locales para empresas maquiladoras.
+          Haster logística inicia operaciones en Cd. Chihuahua, Chih. El 3 de
+          marzo de 2010, ofreciendo servicios de transporte de mercancías vía
+          terrestre en modalidad de camión completo (FTL), en el año 2012
+          comienza a ofrecer servicios de carga consolidado (LTL) entre Cd.
+          Juarez y Cd. Chihuahua, en ese mismo año se inician las operaciones de
+          fletes de Importación / Exportación en la frontera entre Cd. Juarez y
+          El Paso TX.
         </p>
         <p>
-          Debido a la demanda de movimientos en el año del 2018 empieza la
-          implementación de Haster en el servicio de consolidado abriendo
-          sucursal en Ciudad Juárez y Chihuahua el circuito de CUU-JRZ y JRS-CUU
-          empieza operaciones a finales del 2018 siendo un éxito, un año después
-          se apertura importación a el Paso TX.
-        </p>
-        <p>
-          En la ctualidad Haster cuenta con los mismos servicios además de
-          contar con Hand Carrier, que consiste en realizar entregas urgentes a
-          nivel mundial.
-        </p>
-        <p>
-          La confianza de nuestros clientes ha permitido que Haster contiúe en
-          crecimiento.
+          A la fecha Haster Logística ha expandido su portafolio de servicios
+          tales como servicios de carga aérea doméstica e internacional, Hand
+          Carrier y servicios de almacenaje y distribución.
         </p>
       </div>
       <div className={styles.image}></div>

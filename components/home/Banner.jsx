@@ -3,7 +3,7 @@ const HomeBanner = () => {
   return (
     <>
       <section className={styles.mainBanner}>
-        <div></div>
+        <div className={styles.emptyDiv}></div>
         <div className="right--text--wrapper">
           <h1>
             Tu mejor aliado en servicios <br />

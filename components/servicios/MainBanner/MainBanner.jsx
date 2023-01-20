@@ -11,7 +11,7 @@ const MainBanner = ({ title, url }) => {
           backgroundPosition: "center",
         }}
       >
-        <div></div>
+        <div className={styles.emtpy}></div>
         <div className={styles.textWrapper}>
           <h1>{title}</h1>
         </div>

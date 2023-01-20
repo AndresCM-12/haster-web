@@ -4,22 +4,31 @@
   padding: $padding;
   height: fit-content;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 40px;
+  @media screen and (max-width: 768px) {
+    padding: $padding 20px;
+  }
 }
 .textWrapper {
   h1 {
     font-size: 70px;
     color: $color-secondary;
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+      font-size: 4rem;
+    }
   }
   .section {
     margin-top: 40px;
   }
-  .icon{
+  .icon {
     margin-bottom: 8px;
   }
   p {
-    strong{
+    strong {
       font-weight: 700;
     }
     font-size: $h4;
@@ -33,16 +42,34 @@
   margin-top: -170px;
   width: 90%;
   max-width: 812px;
+  @media screen and (max-width: 1411px) {
+    margin-top: 0px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: $padding 20px;
+    h1 {
+      font-size: $h3;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    padding: $padding 20px;
+    max-width: 100%;
+    width: 100%;
+  }
   h1 {
     font-size: 3.2rem;
     color: $color-secondary;
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+      font-size: $h2;
+    }
   }
   form {
     display: flex;
     flex-direction: column;
     padding-top: 50px;
     row-gap: 12px;
+
     label {
       font-size: $h4;
       color: $color-secondary;
@@ -65,7 +92,7 @@
       border-bottom: 1px solid black;
       background-color: $background-tertiary;
     }
-    input.message{
+    input.message {
       height: 231px;
     }
     input::placeholder {

@@ -2,10 +2,45 @@
 
 .mainWrapperRastreo {
   padding: $padding;
+  @media screen and (max-width: 750px) {
+    padding: $padding 20px;
+  }
   height: fit-content;
   p {
     font-size: $h4;
+    margin-bottom: 12px;
+    padding-left: 2px;
     color: $color-secondary;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  width: 100%;
+  div {
+    width: 50%;
+    padding-block: 14px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid $color-primary;
+    h1 {
+      font-size: $h2;
+      color: $color-primary;
+      font-weight: 700;
+      @media screen and (max-width: 750px) {
+        font-size: $h3;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: $h4;
+      }
+    }
+    &.selected {
+      background-color: $background-primary;
+      border: none;
+      h1 {
+        color: $color-tertiary;
+      }
+    }
   }
 }
 
@@ -44,29 +79,5 @@
     margin-top: 43px;
     width: 180px;
     cursor: pointer;
-  }
-}
-
-.titleWrapper {
-  display: flex;
-  width: 100%;
-  div {
-    width: 50%;
-    padding-block: 14px;
-    display: flex;
-    justify-content: center;
-    border: 1px solid $color-primary;
-    h1 {
-      font-size: $h2;
-      color: $color-primary;
-      font-weight: 700;
-    }
-    &.selected {
-      background-color: $background-primary;
-      border: none;
-      h1 {
-        color: $color-tertiary;
-      }
-    }
   }
 }

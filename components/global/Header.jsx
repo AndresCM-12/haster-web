@@ -5,6 +5,14 @@ import { Router, useRouter } from "next/router";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const styles = {
+    popup: {
+      left: menu ? "0%" : "100%",
+    },
+    text: {
+      left: menu ? "calc(100% - 300px)" : "100%",
+    },
+  };
   const router = useRouter();
   return (
     <>
@@ -65,30 +73,45 @@ const Header = () => {
           </svg>
         </div>
       </header>
-      {menu && (
-        <div id="mobileGlobalMenu" className="menu--wrapper">
-          <div
-            onClick={() => setMenu(!!false)}
-            className="menu--background"
-          ></div>
-          <div className="menu--wrapper">
-            <ul>
-              <Link className="links" href={"/servicios"}>
-                <li>SERVICIOS</li>
-              </Link>
-              <Link className="links" href={"/nosotros"}>
-                <li>NOSOTROS</li>
-              </Link>
-              <Link className="links" href={"/servicios"}>
-                <li>CONTACTO</li>
-              </Link>
-              <Link className="links" href={"/rastreo"}>
-                <li>RASTREAR</li>
-              </Link>
-            </ul>
-          </div>
+      <div id="mobileGlobalMenu" className="menu--wrapper">
+        <div
+          onClick={() => setMenu(!!false)}
+          className="menu--background"
+          style={styles.popup}
+        ></div>
+        <div className="menu--wrapper" style={styles.text}>
+          <ul>
+            <Link
+              onClick={() => setMenu(!!false)}
+              className="links"
+              href={"/servicios"}
+            >
+              <li>SERVICIOS</li>
+            </Link>
+            <Link
+              onClick={() => setMenu(!!false)}
+              className="links"
+              href={"/nosotros"}
+            >
+              <li>NOSOTROS</li>
+            </Link>
+            <Link
+              onClick={() => setMenu(!!false)}
+              className="links"
+              href={"/contacto"}
+            >
+              <li>CONTACTO</li>
+            </Link>
+            <Link
+              onClick={() => setMenu(!!false)}
+              className="links"
+              href={"/rastreo"}
+            >
+              <li>RASTREAR</li>
+            </Link>
+          </ul>
         </div>
-      )}
+      </div>
     </>
   );
 };

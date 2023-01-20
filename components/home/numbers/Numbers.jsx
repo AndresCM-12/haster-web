@@ -2,10 +2,10 @@ import styles from "./HomeNumbers.module.scss";
 
 const HomeNumbers = () => {
   const allExperienceArray = [
-    { text: "Embarques", number: 18300 },
-    { text: "Clientes", number: 996 },
-    { text: "Equipos", number: 40 },
-    { text: "Experiencia", number: 15 },
+    { text: "Embarques", number: "183000" },
+    { text: "Clientes", number: "996" },
+    { text: "Equipos", number: " 40 " },
+    { text: "Experiencia", number: " 15 " },
   ];
 
   return (
@@ -25,8 +25,8 @@ const HomeNumbersComponent = ({ title, number }) => {
   return (
     <div className={styles.numberComponent}>
       <div>
-        {title}
         <h1>{number}</h1>
+        <h2>{title}</h2>
       </div>
     </div>
   );
