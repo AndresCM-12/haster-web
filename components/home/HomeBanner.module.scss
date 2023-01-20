@@ -2,7 +2,6 @@
 .mainBanner {
   height: 880px;
   width: 100%;
-  background-color: burlywood;
   background-image: url("../../public/images/HomeBanner.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -24,20 +23,20 @@
       margin-bottom: 20px;
     }
     h6 {
-      font-size: $h4;
+      font-size: 1.7rem;
       color: $color-primary;
       font-weight: 400;
-      max-width: 420px;
+      max-width: 540px;
       margin-bottom: 40px;
     }
     div {
-      padding: 8px 28px;
+      padding: 12px 38px;
       border: 1px solid $color-primary;
       width: fit-content;
       cursor: pointer;
       p {
         width: fit-content;
-        font-size: $h2;
+        font-size: 3.0rem;
         color: $color-primary;
         font-weight: 700;
       }

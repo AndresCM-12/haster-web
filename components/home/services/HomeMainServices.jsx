@@ -6,14 +6,23 @@ import { Scrollbar, A11y } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const HomeMainServices = () => {
+  const router = useRouter();
   const [my_swiper, set_my_swiper] = useState({});
 
   return (
     <div className={styles.servicesWrapper}>
       <h1>Servicios</h1>
-      <div className={styles.button}>Ver todos los servicios</div>
+      <div
+        className={styles.button}
+        onClick={() => {
+          router.push("/servicios");
+        }}
+      >
+        Ver todos los servicios
+      </div>
 
       <Swiper
         id="swiperServices"

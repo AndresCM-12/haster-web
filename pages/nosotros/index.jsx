@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Certificaciones from "../../components/nosotros/certificaciones/certificaciones";
 import Clientes from "../../components/nosotros/clientes/clientes";
 import Historia from "../../components/nosotros/historia/historia";
@@ -7,7 +8,10 @@ import MainBanner from "../../components/servicios/MainBanner/MainBanner";
 export default function Nosotros() {
   return (
     <div>
-      <MainBanner title={"Nosotros"} url={'/images/NosotrosBanner.png'} />
+      <Head>
+        <title>Haster | Nosotros</title>
+      </Head>
+      <MainBanner title={"Nosotros"} url={"/images/NosotrosBanner.png"} />
       <Valores />
       <Historia />
       <Certificaciones />

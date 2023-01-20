@@ -23,7 +23,7 @@ const MainWrapper = () => {
               />
             </svg>
           </div>
-          <p>Tel. 614389 5597/98 </p>
+          <p>Tel. (52) 614 389 55 97/98 </p>
         </div>
 
         <div className={styles.section}>
@@ -70,7 +70,7 @@ const MainWrapper = () => {
               </g>
             </svg>
           </div>
-          <p>comercial@hasterlogis.com</p>
+          <p>info@hasterlogis.com</p>
         </div>
 
         <div className={styles.section}>

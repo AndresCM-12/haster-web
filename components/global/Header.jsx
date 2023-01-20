@@ -38,7 +38,7 @@ const Header = () => {
               <li>CONTACTO</li>
             </Link>
             <Link className="links" href={"/rastreo"}>
-              <li>RASTREAR MI PAQUETE</li>
+              <li>RASTREAR EMBARQUE</li>
             </Link>
           </ul>
         </nav>
@@ -107,7 +107,10 @@ const Header = () => {
               className="links"
               href={"/rastreo"}
             >
-              <li>RASTREAR</li>
+              <li>
+                RASTREAR
+                <br />
+                EMBARQUE</li>
             </Link>
           </ul>
         </div>

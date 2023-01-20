@@ -8,7 +8,9 @@ import HomeServicios from "../components/home/servicios/HomeServicios";
 export default function Home() {
   return (
     <>
-      <Head title="Haster Logistics" />
+      <Head>
+        <title>Haster Logistics</title>
+      </Head>
       <HomeBanner />
       <HomeServicios />
       <HomeNumbers />

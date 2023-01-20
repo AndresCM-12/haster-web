@@ -1,3 +1,4 @@
+import Head from "next/head";
 import MainBanner from "../../components/servicios/MainBanner/MainBanner";
 import ServicesWrapper from "../../components/servicios/ServicesWrapper/ServicesWrapper";
 
@@ -140,7 +141,10 @@ export default function Servicios() {
   ];
   return (
     <>
-      <MainBanner title={'Servicios'} url={'/images/ServiciosBanner.png'}/>
+      <Head>
+        <title>Haster | Servicios</title>
+      </Head>
+      <MainBanner title={"Servicios"} url={"/images/ServiciosBanner.png"} />
       {listOfServices.map((service, index) => (
         <ServicesWrapper key={index} service={service} />
       ))}

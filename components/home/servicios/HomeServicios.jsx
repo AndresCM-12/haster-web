@@ -1,21 +1,24 @@
 import styles from "./HomeServicios.module.scss";
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const HomeServicios = () => {
   let [serviceSelected, setServiceSelected] = useState("Aéreo");
+  const router = useRouter();
   let mainServices = {
     serviceSlideAereo: {
       name: "Aéreo",
-      text: `Transporte Aéreo de Carga Domestica e internacional Servidio de transportación aérea domestica e internacional eificiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. Una amplia base de experiencia en servicio de transportación aérea, nos permite garantizar la satisfacción de todas las necesidades de todos nuestros clientes.`,
-      image:
-        "https://actualidadaeroespacial.com/wp-content/uploads/2021/08/AITIIP-desarrolla-tecnologias-inteligentes-para-producir-un-ala-de-avion-hibrida-y-sostenible-310821-scaled.jpg",
+      text: `Transporte Aéreo de Carga Doméstica e Internacional
+      Servicio de Transportación Aérea Doméstica e Internacional eficiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. 
+      Una amplia base de experiencia en servicios de transportación aérea, nos permite garantizar la satisfacción de todas las necesidades de todos nuestros clientes.
+      `,
+      image: "/images/servicio_aereo.png",
     },
     serviceSlideTerrestre: {
       name: "Terrestre",
-      text: `Transporte Aéreo de Carga Domestica e internacional Servidio de transportación aérea domestica e internacional eificiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. Una amplia base de experiencia en servicio de transportación aérea, nos permite garantizar la satisfacción de todas las necesidades de todos nuestros clientes.`,
-      image:
-        "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+      text: `Haster Logística ofrece soluciones de transporte terrestre en todo el territorio mexicano y el Sur de Estados Unidos de América, ofreciendo el correcto manejo de flujos de carga terrestre desde origen hasta destino, ofreciendo servicios con valor agregado como, seguros de carga, asesoría, servicios de cross dock.`,
+      image: "/images/servicio_terrestre.png",
     },
   };
 
@@ -23,7 +26,12 @@ const HomeServicios = () => {
     <>
       <div className={styles.mainWrapperServices}>
         <h1>¿Por aire o por tierra?</h1>
-        <div className={styles.button}>
+        <div
+          className={styles.button}
+          onClick={() => {
+            router.push("/servicios");
+          }}
+        >
           <p>Ver todos los servicios</p>
         </div>
         <div className={styles.servicesWrapper}>
@@ -71,6 +79,8 @@ const TextInServiceComponent = ({ get, set, name }) => {
 };
 
 const ServiceSlideComponent = ({ serviceSlide, order }) => {
+  const router = useRouter();
+
   return (
     <>
       {order === "left" ? (
@@ -110,7 +120,14 @@ const ServiceSlideComponent = ({ serviceSlide, order }) => {
             </div>
             <h1>{serviceSlide.name}</h1>
             <p>{serviceSlide.text}</p>
-            <div className={styles.button}>Conoce más</div>
+            <div
+              className={styles.button}
+              onClick={() => {
+                router.push("/servicios");
+              }}
+            >
+              Conoce más
+            </div>
           </div>
           <div className={styles.transparent}></div>
         </div>
@@ -139,7 +156,14 @@ const ServiceSlideComponent = ({ serviceSlide, order }) => {
             </div>
             <h1>{serviceSlide.name}</h1>
             <p>{serviceSlide.text}</p>
-            <div className={styles.button}>Conoce más</div>
+            <div
+              className={styles.button}
+              onClick={() => {
+                router.push("/servicios");
+              }}
+            >
+              Conoce más
+            </div>
           </div>
         </div>
       )}

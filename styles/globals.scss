@@ -16,6 +16,10 @@ html {
   overflow-x: hidden;
   background-color: $background-primary;
 }
+::selection {
+  background-color: $color-secondary;
+  color: $background-primary;
+}
 //swiper
 #swiperServices {
   margin-left: 200px !important;
@@ -35,7 +39,7 @@ html {
 }
 
 #globalHeader {
-  background-color: rgba($color: #000000, $alpha: 0.4);
+  background-color: rgba($color: #000000, $alpha: 0.7);
   height: fit-content;
   padding-block: 20px;
   display: flex;
@@ -86,6 +90,7 @@ html {
     }
     li {
       font-weight: 300;
+      font-size: 1.6rem;
     }
     @media screen and (max-width: 1450px) {
       display: none;
@@ -97,16 +102,20 @@ html {
     align-items: center;
     column-gap: 40px;
     font-size: $h5;
-    margin-left: 10%;
     @media screen and (max-width: 750px) {
       display: none;
     }
     .button {
       background-color: $color-secondary;
       color: $color-primary;
-      padding: 4px 20px;
+      padding: 6px 24px;
       border: none;
       cursor: pointer;
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 300;
+      }
     }
   }
   .right--section--wrapper--icon {
@@ -198,10 +207,10 @@ html {
       background-color: $color-primary;
     }
     h6 {
-      font-size: $h5;
+      font-size: $h4;
       font-weight: 700;
     }
-    font-size: $h6;
+    font-size: $h5;
     ul {
       display: flex;
       flex-direction: column;

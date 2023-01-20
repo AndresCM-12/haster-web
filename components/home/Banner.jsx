@@ -1,5 +1,7 @@
+import { useRouter } from "next/router";
 import styles from "./HomeBanner.module.scss";
 const HomeBanner = () => {
+  const router = useRouter();
   return (
     <>
       <section className={styles.mainBanner}>
@@ -15,7 +17,7 @@ const HomeBanner = () => {
             significativamente los costos y aumentar la competitividad en un
             mundo globalizado.
           </h6>
-          <div className="button">
+          <div onClick={()=>{router.push('/contacto')}} className="button">
             <p>Contáctanos</p>
           </div>
         </div>
