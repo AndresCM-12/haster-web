@@ -67,19 +67,19 @@ const Clientes = () => {
           spaceBetween={20}
           slidesPerView={"auto"}
         >
-          <SwiperSlide>
+          <SwiperSlide className={styles.slide}>
             <div className={styles.imgContainer}></div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={styles.slide}>
             <div className={styles.imgContainer}></div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={styles.slide}>
             <div className={styles.imgContainer}></div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={styles.slide}>
             <div className={styles.imgContainer}></div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className={styles.slide}>
             <div className={styles.imgContainer}></div>
           </SwiperSlide>
         </Swiper>
