@@ -11,6 +11,20 @@
   @media screen and (max-width: 768px) {
     padding: $padding 20px;
   }
+  .socialMedia {
+    display: flex;
+    column-gap: 20px;
+    margin-top: 12px;
+    div {
+      width: fit-content;
+      cursor: pointer;
+      svg {
+        path {
+          fill: $color-secondary;
+        }
+      }
+    }
+  }
 }
 .textWrapper {
   h1 {

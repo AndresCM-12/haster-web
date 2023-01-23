@@ -7,10 +7,10 @@ import { InView } from "react-intersection-observer";
 
 const HomeNumbers = () => {
   const allExperienceArray = [
-    { text: "Embarques", number: 183000, duration: 9 },
-    { text: "Clientes", number: 996, duration: 8 },
-    { text: "Equipos", number: 40, duration: 4 },
-    { text: "Experiencia", number: 15, duration: 3 },
+    { text: "Embarques", number: 183000, duration: 1 },
+    { text: "Clientes", number: 996, duration: 2 },
+    { text: "Equipos", number: 40, duration: 1.5 },
+    { text: "Experiencia", number: 15, duration: 0.5 },
   ];
 
   return (

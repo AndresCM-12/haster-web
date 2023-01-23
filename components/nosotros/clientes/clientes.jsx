@@ -1,10 +1,11 @@
 import styles from "./clientes.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar, A11y } from "swiper";
+import { Scrollbar, A11y, FreeMode, Autoplay } from "swiper";
 import { useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
+import Image from "next/image";
 
 const Clientes = () => {
   const [my_swiper, set_my_swiper] = useState({});
@@ -62,25 +63,98 @@ const Clientes = () => {
           onInit={(ev) => {
             set_my_swiper(ev);
           }}
-          modules={[Scrollbar, A11y]}
+          modules={[Scrollbar, A11y, FreeMode, Autoplay]}
+          loop={true}
+          speed={1000}
+          autoplay={{ delay: 2500 }}
+          freeMode={true}
           navigation={{ nextEl: "#nextArrow" }}
           spaceBetween={20}
           slidesPerView={"auto"}
         >
           <SwiperSlide className={styles.slide}>
-            <div className={styles.imgContainer}></div>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/Comex.png"
+                alt="Comex brand logo"
+              />
+            </div>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
-            <div className={styles.imgContainer}></div>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/Comihnox.png"
+                alt="Comex brand logo"
+              />
+            </div>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
-            <div className={styles.imgContainer}></div>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/GmSolutions.png"
+                alt="Comex brand logo"
+              />
+            </div>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
-            <div className={styles.imgContainer}></div>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/Ripipsa.png"
+                alt="Comex brand logo"
+              />
+            </div>
           </SwiperSlide>
           <SwiperSlide className={styles.slide}>
-            <div className={styles.imgContainer}></div>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/Jabil.png"
+                alt="Comex brand logo"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/Maqsuca.png"
+                alt="Comex brand logo"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.imgContainer}>
+              <Image
+                loading="eager"
+                style={{ objectFit: "contain" }}
+                width="310"
+                height="100"
+                src="/images/clientes/GrupoGardea.png"
+                alt="Comex brand logo"
+              />
+            </div>
           </SwiperSlide>
         </Swiper>
         <div

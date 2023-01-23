@@ -33,14 +33,12 @@ const HomeMainServices = () => {
         modules={[Scrollbar, A11y]}
         navigation={{ nextEl: "#nextArrow" }}
         spaceBetween={25}
+        loop={true}
         slidesPerView={"auto"}
       >
         <SwiperSlide className={styles.slide}>
           <div className={styles.serviceCard}>
-            <img
-              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
-              alt="camiones"
-            />
+            <img src="/images/servicios/05.png" alt="camiones" />
             <div className={styles.textWrapper}>
               <h2>Fletes de Importación y Exportación.</h2>
               <p>Conoce más</p>
@@ -49,60 +47,27 @@ const HomeMainServices = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.serviceCard}>
-            <img
-              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
-              alt="camiones"
-            />
+            <img src="/images/servicios/25.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Fletes de Importación y Exportación.</h2>
+              <h2>Almacenamiento en bodega.</h2>
               <p>Conoce más</p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.serviceCard}>
-            <img
-              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
-              alt="camiones"
-            />
+            <img src="/images/servicios/23.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Fletes de Importación y Exportación.</h2>
+              <h2>Hand Carrier.</h2>
               <p>Conoce más</p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className={styles.serviceCard}>
-            <img
-              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
-              alt="camiones"
-            />
+            <img src="/images/servicios/24.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Fletes de Importación y Exportación.</h2>
-              <p>Conoce más</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.serviceCard}>
-            <img
-              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
-              alt="camiones"
-            />
-            <div className={styles.textWrapper}>
-              <h2>Fletes de Importación y Exportación.</h2>
-              <p>Conoce más</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.serviceCard}>
-            <img
-              src="https://cpsaracing.com/wp-content/uploads/2019/09/Camiones-recorriendo-la-carretera.jpg"
-              alt="camiones"
-            />
-            <div className={styles.textWrapper}>
-              <h2>Fletes de Importación y Exportación.</h2>
+              <h2>Servicio de Carga Aérea Nacional e Internacional</h2>
               <p>Conoce más</p>
             </div>
           </div>

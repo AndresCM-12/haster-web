@@ -129,8 +129,15 @@ html {
   .right--section--wrapper--icon {
     display: flex;
     column-gap: 20px;
-    p {
+    div {
       border-radius: 4px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
     }
     @media screen and (max-width: 870px) {
       display: none;
@@ -230,6 +237,15 @@ html {
       display: flex;
       column-gap: 20px;
       margin-top: 12px;
+      div {
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
     @media screen and (max-width: 950px) {
       padding: $padding;

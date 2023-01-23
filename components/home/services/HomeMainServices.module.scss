@@ -54,20 +54,24 @@
     }
   }
 }
-
+.swiperServices {
+  padding-block: 10px;
+}
 .slide {
   width: 380px !important;
+  height: 455px !important;
 }
 
 .serviceCard {
   background-color: $background-primary;
   border-radius: 0px;
   margin-block: 16px;
+  position: relative;
   width: 380px;
   height: 450px;
-  display: grid;
-  grid-template-rows: 1fr auto;
+  z-index: 1;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
   @media screen and (max-width: 500px) {
     width: 300px;
   }
@@ -76,13 +80,30 @@
     height: 100%;
     object-fit: cover;
   }
+  &:hover {
+    .textWrapper {
+      bottom: 0px;
+    }
+  }
   .textWrapper {
-    padding: 24px 16px;
+    width: 100%;
+    user-select: none;
+    background-color: white;
+    display: grid;
+    place-content: center flex-start;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-block: 12px;
+    padding-inline: 16px;
+    z-index: 1;
+    bottom: -25px;
+    transition: bottom 0.3s ease-in-out;
     h2 {
       font-size: $h4;
       color: $color-secondary;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
     p {
       font-size: 12px;
