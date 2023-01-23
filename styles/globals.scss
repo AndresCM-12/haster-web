@@ -29,12 +29,20 @@ html {
   @media screen and (max-width: 500px) {
     margin-left: 48px !important;
   }
-}
-.swiper-backface-hidden .swiper-slide {
-  width: fit-content;
-  padding-left: 10px;
-  @media screen and (max-width: 500px) {
-    padding-left: 0px;
+
+  .swiper-backface-hidden .swiper-slide {
+    width: fit-content;
+    padding-left: 10px;
+    @media screen and (max-width: 500px) {
+      padding-left: 0px;
+    }
+  }
+
+  .swiper-slide {
+    width: 380px !important;
+    @media screen and (max-width: 500px) {
+      width: 300px !important;
+    }
   }
 }
 
