@@ -54,10 +54,10 @@ html {
 }
 
 #globalHeader {
-  background-color: rgba($color: #000000, $alpha: 0.7);
+  background-color: rgba(0, 0, 0, 0);
   height: fit-content;
-  padding-block: 20px;
   padding-top: 40px;
+  padding-bottom: 20px;
   display: flex;
   padding-inline: $padding;
   transition: background-color 0.5s ease-in-out, padding-top 0.5s ease-in-out;
@@ -109,7 +109,7 @@ html {
     }
     li {
       font-weight: 300;
-      font-size: 2.0rem;
+      font-size: 2rem;
       padding-bottom: 0px;
     }
     li:after {

@@ -7,7 +7,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [menuBackground, setMenuBackground] = useState("rgba(0,0,0,0)");
-  const [menuPaddingTop, setMenuPaddingTop] = useState("20px");
+  const [menuPaddingTop, setMenuPaddingTop] = useState("40px");
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
