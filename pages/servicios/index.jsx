@@ -11,58 +11,48 @@ export default function Servicios() {
       services: [
         {
           text: `Servicio Puerta a puerta.`,
-          image:
-            "https://actualidadaeroespacial.com/wp-content/uploads/2021/08/AITIIP-desarrolla-tecnologias-inteligentes-para-producir-un-ala-de-avion-hibrida-y-sostenible-310821-scaled.jpg",
+          image: "/images/servicios/20.png",
         },
         {
-          text: `Servicio de Carga Completa (FTL).`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Servicio de Carga Completa
+          (FTL).`,
+          image: "/images/servicios/11.png",
         },
         {
           text: `Servicio de Carga Consolidada (LTL).`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/02.png",
         },
         {
           text: `Especializado.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/22.png",
         },
         {
-          text: `Expediente.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Expeditado.`,
+          image: "/images/servicios/05.png",
         },
         {
           text: `Importación y Exportación Terrestre.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/19.png",
         },
         {
           text: `Operación y atención de Proyectos Especiales.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/01.png",
         },
         {
           text: `Recolección y entrega "Just in Time".`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/16.png",
         },
         {
           text: `Entrega garantizada.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/08.png",
         },
         {
           text: `Team Time drivers.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/03.png",
         },
         {
           text: `Seguro de mercancías.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          image: "/images/servicios/15.png",
         },
       ],
       secondary: false,
@@ -76,29 +66,36 @@ export default function Servicios() {
       `,
       services: [
         {
-          text: `Transporte Aéreo de Carga Domestica.`,
-          image:
-            "https://actualidadaeroespacial.com/wp-content/uploads/2021/08/AITIIP-desarrolla-tecnologias-inteligentes-para-producir-un-ala-de-avion-hibrida-y-sostenible-310821-scaled.jpg",
+          text: `Carga Área Nacional.`,
+          image: "/images/servicios/21.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Carga Aérea Internacional.`,
+          image: "/images/servicios/06.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Vuelos Charter.`,
+          image: "/images/servicios/00.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Hand Carrier.`,
+          image: "/images/servicios/07.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Servicio Puerta-Puerta.`,
+          image: "/images/servicios/17.png",
+        },
+        {
+          text: `Servicio Priority.`,
+          image: "/images/servicios/13.png",
+        },
+        {
+          text: `Next Flight Out.`,
+          image: "/images/servicios/05.png",
+        },
+        {
+          text: `Seguro de mercancía`,
+          image: "/images/servicios/09.png",
         },
       ],
       secondary: true,
@@ -111,29 +108,42 @@ export default function Servicios() {
       `,
       services: [
         {
-          text: `Transporte Aéreo de Carga Domestica.`,
-          image:
-            "https://actualidadaeroespacial.com/wp-content/uploads/2021/08/AITIIP-desarrolla-tecnologias-inteligentes-para-producir-un-ala-de-avion-hibrida-y-sostenible-310821-scaled.jpg",
+          text: `Almacenaje.`,
+          image: "/images/servicios/25.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Recolección de mercancías.`,
+          image: "/images/servicios/18.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Distribución y transporte.`,
+          image: "/images/servicios/12.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Entregas a Clientes, unidades
+          dedicadas y consolidadas.`,
+          image: "/images/servicios/04.png",
         },
         {
-          text: `Transporte Domestica e internacional.`,
-          image:
-            "https://www.viveusa.mx/sites/default/files/field/image/camiones_autonomos_texas_afp.jpg",
+          text: `Entregas a CEDIS.`,
+          image: "/images/servicios/20.png",
+        },
+        {
+          text: `Rutas consolidadas.`,
+          image: "/images/servicios/03.png",
+        },
+        {
+          text: `Cross Docking.`,
+          image: "/images/servicios/05.png",
+        },
+        {
+          text: `Operaciones de descarga y
+          carga en andén.`,
+          image: "/images/servicios/10.png",
+        },
+        {
+          text: `Estadía de 24 a 72 horas.`,
+          image: "/images/servicios/22.png",
         },
       ],
       secondary: false,

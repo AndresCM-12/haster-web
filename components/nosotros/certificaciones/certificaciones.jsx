@@ -1,8 +1,15 @@
 import styles from "./certificaciones.module.scss";
+import { motion } from "framer-motion";
 
 const Certificaciones = () => {
   return (
-    <div className={styles.mainWrapper}>
+    <motion.div
+      initial={{ paddingTop: 360, opacity: 0 }}
+      whileInView={{ paddingTop: 160, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className={styles.mainWrapper}
+    >
       <div className={styles.titleWrapper}>
         <p>Nuestras</p>
         <h1>Certificaciones</h1>
@@ -38,7 +45,7 @@ const Certificaciones = () => {
           organizacional favorable en los centros de trabajo.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,3 +1,6 @@
+import React from "react";
+import { motion } from "framer-motion";
+
 const Footer = () => {
   //Inner components
   const Services = () => {
@@ -19,7 +22,13 @@ const Footer = () => {
   };
 
   return (
-    <footer id="globalFooter">
+    <motion.footer
+      initial={{ paddingTop: 260 }}
+      whileInView={{ paddingTop: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      id="globalFooter"
+    >
       <div className="services--wrapper">
         <Services />
       </div>
@@ -122,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 const Icon = () => {

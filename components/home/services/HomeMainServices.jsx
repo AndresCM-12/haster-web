@@ -2,7 +2,7 @@
 import styles from "./HomeMainServices.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, A11y } from "swiper";
-
+import { motion } from "framer-motion";
 // Import Swiper styles
 import "swiper/css";
 import { useState } from "react";
@@ -13,7 +13,13 @@ const HomeMainServices = () => {
   const [my_swiper, set_my_swiper] = useState({});
 
   return (
-    <div className={styles.servicesWrapper}>
+    <motion.div
+      initial={{ paddingTop: 260 }}
+      whileInView={{ paddingTop: 80 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className={styles.servicesWrapper}
+    >
       <h1>Servicios</h1>
       <div
         className={styles.button}
@@ -41,7 +47,7 @@ const HomeMainServices = () => {
             <img src="/images/servicios/05.png" alt="camiones" />
             <div className={styles.textWrapper}>
               <h2>Fletes de Importación y Exportación.</h2>
-              <p>Conoce más</p>
+              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
             </div>
           </div>
         </SwiperSlide>
@@ -50,7 +56,7 @@ const HomeMainServices = () => {
             <img src="/images/servicios/25.png" alt="camiones" />
             <div className={styles.textWrapper}>
               <h2>Almacenamiento en bodega.</h2>
-              <p>Conoce más</p>
+              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
             </div>
           </div>
         </SwiperSlide>
@@ -59,7 +65,7 @@ const HomeMainServices = () => {
             <img src="/images/servicios/23.png" alt="camiones" />
             <div className={styles.textWrapper}>
               <h2>Hand Carrier.</h2>
-              <p>Conoce más</p>
+              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
             </div>
           </div>
         </SwiperSlide>
@@ -68,12 +74,14 @@ const HomeMainServices = () => {
             <img src="/images/servicios/24.png" alt="camiones" />
             <div className={styles.textWrapper}>
               <h2>Servicio de Carga Aérea Nacional e Internacional</h2>
-              <p>Conoce más</p>
+              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
             </div>
           </div>
         </SwiperSlide>
       </Swiper>
-      <div
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         className={styles.swiperButton}
         onClick={() => {
           my_swiper.slideNext();
@@ -92,7 +100,7 @@ const HomeMainServices = () => {
             transform="translate(1.414 8.063)"
             fill="none"
             stroke="#2f2e64"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Path_131"
@@ -101,7 +109,7 @@ const HomeMainServices = () => {
             transform="translate(-221.293 -3588.437)"
             fill="none"
             stroke="#2f2e64"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Path_136"
@@ -110,11 +118,11 @@ const HomeMainServices = () => {
             transform="translate(1.414 8.063)"
             fill="none"
             stroke="#2f2e64"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

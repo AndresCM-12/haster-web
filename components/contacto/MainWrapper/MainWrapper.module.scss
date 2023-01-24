@@ -105,6 +105,10 @@
       border: none;
       border-bottom: 1px solid black;
       background-color: $background-tertiary;
+      padding-bottom: 4px;
+      &:focus {
+        outline: none;
+      }
     }
     input.message {
       height: 231px;

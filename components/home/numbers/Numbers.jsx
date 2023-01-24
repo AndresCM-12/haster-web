@@ -1,20 +1,25 @@
 import styles from "./HomeNumbers.module.scss";
-import CountUp, { useCountUp } from "react-countup";
-import { motion } from "framer-motion";
+import { useCountUp } from "react-countup";
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import { InView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const HomeNumbers = () => {
   const allExperienceArray = [
-    { text: "Embarques", number: 183000, duration: 1 },
+    { text: "Embarques", number: 183000, duration: 2 },
     { text: "Clientes", number: 996, duration: 2 },
     { text: "Equipos", number: 40, duration: 1.5 },
-    { text: "Experiencia", number: 15, duration: 0.5 },
+    { text: "Experiencia", number: 15, duration: 1 },
   ];
 
   return (
-    <div className={styles.numbersWrapper}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className={styles.numbersWrapper}
+    >
       {allExperienceArray.map((item, index) => (
         <HomeNumbersComponent
           key={index}
@@ -23,7 +28,7 @@ const HomeNumbers = () => {
           duration={item.duration}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
@@ -35,6 +40,7 @@ const HomeNumbersComponent = ({ title, number, duration }) => {
     end: number,
     delay: 1000,
     duration: duration,
+    transition: "easeInOut",
   });
 
   return (

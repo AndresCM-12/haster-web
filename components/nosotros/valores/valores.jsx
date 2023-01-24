@@ -1,8 +1,15 @@
 import styles from "./valores.module.scss";
+import { motion } from "framer-motion";
 
 const Valores = () => {
   return (
-    <div className={styles.mainWrapper}>
+    <motion.div
+      initial={{ marginTop: 0, opacity: 0 }}
+      whileInView={{ marginTop: -80, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className={styles.mainWrapper}
+    >
       <div className={styles.valoresWrapper}>
         <div className={styles.wrapper}>
           <div className={styles.valor}>
@@ -312,7 +319,7 @@ const Valores = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

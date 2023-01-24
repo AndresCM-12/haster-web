@@ -1,8 +1,15 @@
 import styles from "./MainWrapper.module.scss";
+import { motion } from "framer-motion";
 
 const MainWrapper = () => {
   return (
-    <div className={styles.mainWrapperContact}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className={styles.mainWrapperContact}
+    >
       <div className={styles.textWrapper}>
         <h1>Contáctanos</h1>
 
@@ -152,6 +159,7 @@ const MainWrapper = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.contactWrapper}>
         <h1>Escríbenos para cualquier duda</h1>
         <form action="none">
@@ -172,7 +180,7 @@ const MainWrapper = () => {
           <button>Enviar</button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default MainWrapper;

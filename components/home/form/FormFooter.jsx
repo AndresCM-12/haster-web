@@ -1,10 +1,20 @@
 import styles from "./FormFooter.module.scss";
+import { motion } from "framer-motion";
 
 const FormFooter = () => {
   return (
     <>
-      <div className={styles.wrapperForm}>
-        <div className={styles.background}>
+      <div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className={styles.wrapperForm}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className={styles.background}
+        >
           <h1>Contáctanos</h1>
           <form className={styles.Form}>
             <label htmlFor="name">Nombre:</label>
@@ -19,7 +29,7 @@ const FormFooter = () => {
             <input type="text" name="message" id="message" />
             <button>Enviar</button>
           </form>
-        </div>
+        </motion.div>
       </div>
       <div className={styles.wrapperMap}>
         <div className={styles.Map}>

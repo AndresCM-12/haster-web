@@ -2,9 +2,24 @@ import React from "react";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [menuBackground, setMenuBackground] = useState("rgba(0,0,0,0)");
+  const [menuPaddingTop, setMenuPaddingTop] = useState("20px");
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 100) {
+      setMenuBackground("rgba(0,0,0,0.7)");
+      setMenuPaddingTop("20px");
+    } else {
+      setMenuBackground("rgba(0,0,0,0)");
+      setMenuPaddingTop("40px");
+    }
+  });
+
   const styles = {
     popup: {
       left: menu ? "0%" : "100%",
@@ -16,7 +31,15 @@ const Header = () => {
   const router = useRouter();
   return (
     <>
-      <header id="globalHeader">
+      <motion.header
+        initial={{ top: -50, opacity: 0 }}
+        whileInView={{ top: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className={styles.mainWrapperServices}
+        id="globalHeader"
+        style={{ background: menuBackground, paddingTop: menuPaddingTop }}
+      >
         <div
           className="logo--wrapper"
           onClick={() => {
@@ -29,16 +52,16 @@ const Header = () => {
         <nav>
           <ul>
             <Link className="links" href={"/servicios"}>
-              <li>SERVICIOS</li>
+              <motion.li>SERVICIOS</motion.li>
             </Link>
             <Link className="links" href={"/nosotros"}>
-              <li>NOSOTROS</li>
+              <motion.li>NOSOTROS</motion.li>
             </Link>
             <Link className="links" href={"/contacto"}>
-              <li>CONTACTO</li>
+              <motion.li>CONTACTO</motion.li>
             </Link>
             <Link className="links" href={"/rastreo"}>
-              <li>RASTREAR EMBARQUE</li>
+              <motion.li>RASTREAR EMBARQUE</motion.li>
             </Link>
           </ul>
         </nav>
@@ -131,7 +154,8 @@ const Header = () => {
             />
           </svg>
         </div>
-      </header>
+      </motion.header>
+
       <div id="mobileGlobalMenu" className="menu--wrapper">
         <div
           onClick={() => setMenu(!!false)}
@@ -140,6 +164,9 @@ const Header = () => {
         ></div>
         <div className="menu--wrapper" style={styles.text}>
           <ul>
+            <Link onClick={() => setMenu(!!false)} className="links" href={"/"}>
+              <li>INICIO</li>
+            </Link>
             <Link
               onClick={() => setMenu(!!false)}
               className="links"
@@ -166,11 +193,7 @@ const Header = () => {
               className="links"
               href={"/rastreo"}
             >
-              <li>
-                RASTREAR
-                <br />
-                EMBARQUE
-              </li>
+              <li>RASTREAR</li>
             </Link>
           </ul>
         </div>
@@ -323,7 +346,4 @@ const Isotype = () => {
   );
 };
 
-const handleClick = () => {
-  console.log("hey");
-};
 export default Header;

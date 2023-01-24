@@ -1,9 +1,14 @@
 import styles from "./ServicesWrapper.module.scss";
+import { motion } from "framer-motion";
 
 const ServicesWrapper = ({ service }) => {
   return (
     <>
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
         className={
           !service.secondary ? styles.MainWrapper : styles.MainWrapperSecondary
         }
@@ -27,7 +32,7 @@ const ServicesWrapper = ({ service }) => {
             <Card key={index} service={service} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

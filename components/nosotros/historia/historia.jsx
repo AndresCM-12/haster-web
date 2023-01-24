@@ -1,8 +1,15 @@
 import styles from "./historia.module.scss";
+import { motion } from "framer-motion";
 
 const Historia = () => {
   return (
-    <div className={styles.mainWrapper}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className={styles.mainWrapper}
+    >
       <div className={styles.leftWrapper}>
         <h1>Historia</h1>
         <p>
@@ -21,7 +28,7 @@ const Historia = () => {
         </p>
       </div>
       <div className={styles.image}></div>
-    </div>
+    </motion.div>
   );
 };
 

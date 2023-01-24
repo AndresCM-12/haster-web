@@ -2,6 +2,7 @@ import styles from "./clientes.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, A11y, FreeMode, Autoplay } from "swiper";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,7 +12,13 @@ const Clientes = () => {
   const [my_swiper, set_my_swiper] = useState({});
 
   return (
-    <div className={styles.mainWrapper}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className={styles.mainWrapper}
+    >
       <div className={styles.textWrapper}>
         <p>Algunos de nuestros</p>
         <h1>Clientes</h1>
@@ -36,7 +43,7 @@ const Clientes = () => {
               transform="translate(1.414 8.063)"
               fill="none"
               stroke="#2f2e64"
-              stroke-width="2"
+              strokeWidth="2"
             />
             <path
               id="Path_131"
@@ -45,7 +52,7 @@ const Clientes = () => {
               transform="translate(-221.293 -3588.437)"
               fill="none"
               stroke="#2f2e64"
-              stroke-width="2"
+              strokeWidth="2"
             />
             <path
               id="Path_136"
@@ -54,7 +61,7 @@ const Clientes = () => {
               transform="translate(1.414 8.063)"
               fill="none"
               stroke="#2f2e64"
-              stroke-width="2"
+              strokeWidth="2"
             />
           </svg>
         </div>
@@ -181,7 +188,7 @@ const Clientes = () => {
                 transform="translate(225.5 3596.5)"
                 fill="none"
                 stroke="#2f2e64"
-                stroke-width="2"
+                strokeWidth="2"
               />
               <path
                 id="Path_101"
@@ -190,13 +197,13 @@ const Clientes = () => {
                 transform="translate(2.793)"
                 fill="none"
                 stroke="#2f2e64"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </g>
           </svg>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

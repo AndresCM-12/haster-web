@@ -3,7 +3,7 @@
 .mainWrapperServices {
   background-color: $background-tertiary;
   margin-inline: $padding;
-  margin-top: -80px;
+  margin-top: 0px;
   color: $color-secondary;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
   min-height: 500px;
   @media screen and (max-width: 500px) {
     margin-inline: 20px;
+    min-height: 400px;
   }
   h1 {
     font-size: $h1;
@@ -72,6 +73,7 @@
     height: 820px;
     background-position: center;
     background-size: cover;
+    background-color: $background-secondary;
     @media screen and (max-width: 750px) {
       grid-template-columns: 1fr;
     }

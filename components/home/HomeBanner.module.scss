@@ -10,6 +10,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  @media screen and (max-width: 500px) {
+    height: 790px;
+  }
   .emptyDiv {
     @media screen and (max-width: 870px) {
       display: none;

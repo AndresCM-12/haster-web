@@ -2,6 +2,7 @@ import styles from "./HomeServicios.module.scss";
 import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { delay, motion } from "framer-motion";
 
 const HomeServicios = () => {
   let [serviceSelected, setServiceSelected] = useState("Aéreo");
@@ -24,7 +25,13 @@ const HomeServicios = () => {
 
   return (
     <>
-      <div className={styles.mainWrapperServices}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ marginTop: -90, opacity: 1 }}
+        viewport={{ once: true }}
+        className={styles.mainWrapperServices}
+        transition={{ duration: 0.5 }}
+      >
         <h1>¿Por aire o por tierra?</h1>
         <div
           className={styles.button}
@@ -47,8 +54,15 @@ const HomeServicios = () => {
             name={"Terrestre"}
           />
         </div>
-      </div>
-      <div className={styles.dynamicWrapper}>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className={styles.dynamicWrapper}
+      >
         {serviceSelected === "Aéreo" ? (
           <ServiceSlideComponent
             serviceSlide={mainServices.serviceSlideAereo}
@@ -60,7 +74,7 @@ const HomeServicios = () => {
             order={"right"}
           />
         )}
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -1,12 +1,21 @@
 import { useRouter } from "next/router";
 import styles from "./HomeBanner.module.scss";
+import { motion } from "framer-motion";
+
 const HomeBanner = () => {
   const router = useRouter();
   return (
     <>
       <section className={styles.mainBanner}>
         <div className={styles.emptyDiv}></div>
-        <div className="right--text--wrapper">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          
+          className="right--text--wrapper"
+        >
           <h1>
             Tu mejor aliado en servicios <br />
             de logística y transporte
@@ -17,10 +26,15 @@ const HomeBanner = () => {
             significativamente los costos y aumentar la competitividad en un
             mundo globalizado.
           </h6>
-          <div onClick={()=>{router.push('/contacto')}} className="button">
+          <div
+            onClick={() => {
+              router.push("/contacto");
+            }}
+            className="button"
+          >
             <p>Contáctanos</p>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

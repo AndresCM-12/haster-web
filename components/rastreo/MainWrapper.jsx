@@ -1,9 +1,16 @@
 import styles from "./MainWrapper.module.scss";
+import { motion } from "framer-motion";
 
 const MainWrapper = () => {
   return (
     <div className={styles.mainWrapperRastreo}>
-      <div className={styles.searchWrapper}>
+      <motion.div
+        initial={{ marginTop: -80, opacity: 0 }}
+        whileInView={{ marginTop: -160, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className={styles.searchWrapper}
+      >
         <div className={styles.titleWrapper}>
           <div className={styles.selected}>
             <h1>Rastre tu envío</h1>
@@ -17,7 +24,7 @@ const MainWrapper = () => {
           type="text"
         />
         <button>Rastrear</button>
-      </div>
+      </motion.div>
       <p>¿Qué Es un Número de Rastreo y Dónde Puedo Encontrarlo?</p>
       <p>¿Puedo rastrear mi embarque si no tengo un número de rastreo? </p>
     </div>
