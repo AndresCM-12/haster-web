@@ -11,6 +11,8 @@
   align-items: center;
   row-gap: 40px;
   min-height: 500px;
+  position: relative;
+  z-index: 10;
   @media screen and (max-width: 500px) {
     margin-inline: 20px;
     min-height: 400px;

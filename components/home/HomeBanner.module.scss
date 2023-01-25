@@ -1,4 +1,8 @@
 @import "../../styles/shared.scss";
+
+.swiperWrapper {
+  height: 880px;
+}
 .mainBanner {
   height: 880px;
   width: 100%;
@@ -39,7 +43,7 @@
       cursor: pointer;
       p {
         width: fit-content;
-        font-size: 3.0rem;
+        font-size: 3rem;
         color: $color-primary;
         font-weight: 700;
       }
