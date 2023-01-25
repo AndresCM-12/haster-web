@@ -56,7 +56,7 @@ const Footer = () => {
         <div>
           <h6>Contacto</h6>
           <ul>
-            <li>Tel. 614 389 55(97/98)</li>
+            <li>Tel. [52] 61 4389 5597/98</li>
             <li>Nosotros</li>
             <li>Contacto</li>
           </ul>

@@ -30,7 +30,7 @@ const MainWrapper = () => {
               />
             </svg>
           </div>
-          <p>Tel. (52) 614 389 55 97/98 </p>
+          <p>Tel. [52] 61 4389 5597/98 </p>
         </div>
 
         <div className={styles.section}>
