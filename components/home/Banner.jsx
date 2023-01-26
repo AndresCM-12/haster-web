@@ -20,19 +20,20 @@ const HomeBanner = () => {
       }}
       navigation={true}
       modules={[Pagination, Navigation]}
-      >
+    >
       <SwiperSlide className={styles.mainBanner}>
         <div className={styles.emptyDiv}></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.5 }}
           className="right--text--wrapper"
         >
           <h1>
-            Tu mejor aliado en servicios <br />
-            de logística y transporte
+            TU MEJOR ALIADO EN SERVICIOS
+            <br />
+            DE LOGÍSTICA Y TRANSPORTE
           </h1>
           <h6>
             La logística cubre casi todas las actividades de las organizaciones.
@@ -56,18 +57,46 @@ const HomeBanner = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.7 }}
+          transition={{ duration: 0.5 }}
           className="right--text--wrapper"
         >
           <h1>
-            Tu mejor aliado en servicios <br />
-            de logística y transporte
+            “OBJETIVOS PRINCIPALES
+            <br /> DE LA LOGISTICA”
           </h1>
           <h6>
-            La logística cubre casi todas las actividades de las organizaciones.
-            Una correcta administración de logística permite reducir
-            significativamente los costos y aumentar la competitividad en un
-            mundo globalizado.
+            El movimiento oportuno y económico de recursos materiales entre
+            etapas y lugares de trabajo. La reducción de costos.
+            <br />
+            Aumentar la calidad dentro de las organizaciones.
+          </h6>
+          <div
+            onClick={() => {
+              router.push("/contacto");
+            }}
+            className="button"
+          >
+            <p>Contáctanos</p>
+          </div>
+        </motion.div>
+      </SwiperSlide>
+      <SwiperSlide className={styles.mainBanner}>
+        <div className={styles.emptyDiv}></div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="right--text--wrapper"
+        >
+          <h1>
+            “SOMOS LOS MÁS RÁPIDOS
+            <br /> Y LOS MEJORES”
+          </h1>
+          <h6>
+            Haster Logística ofrece soluciones de transporte terrestre contando
+            con un experimentado equipo de trabajo a las mejores tarifas del
+            mercado.
           </h6>
           <div
             onClick={() => {

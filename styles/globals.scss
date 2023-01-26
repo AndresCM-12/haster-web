@@ -52,6 +52,21 @@ html {
     }
   }
 }
+.swiper-pagination-progressbar-fill {
+  background-color: $color-primary !important;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 40px;
+  color: white !important;
+  display: none !important;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 40px;
+  color: white !important;
+  display: none !important;
+}
 
 #globalHeader {
   background-color: rgba(0, 0, 0, 0);
@@ -188,7 +203,7 @@ html {
     height: 100vh;
     max-width: 300px;
     position: fixed;
-    z-index: 2  3;
+    z-index: 2 3;
     transition: left 0.5s ease-in-out;
     left: 100%;
     ul {
