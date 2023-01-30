@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import homeBanner2 from "../../public/images/HomeBanner2.png";
+import homeBanner3 from "../../public/images/HomeBanner3.png";
 const HomeBanner = () => {
   const router = useRouter();
 
@@ -22,7 +23,7 @@ const HomeBanner = () => {
       modules={[Pagination, Navigation]}
     >
       <SwiperSlide className={styles.mainBanner}>
-        <div className={styles.emptyDiv}></div>
+        <div className={[styles.emptyDiv, styles.one]}></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -51,7 +52,10 @@ const HomeBanner = () => {
           </div>
         </motion.div>
       </SwiperSlide>
-      <SwiperSlide className={styles.mainBanner}>
+      <SwiperSlide
+        className={styles.mainBanner}
+        style={{ backgroundImage: `url(/images/HomeBanner2.png)` }}
+      >
         <div className={styles.emptyDiv}></div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -80,7 +84,10 @@ const HomeBanner = () => {
           </div>
         </motion.div>
       </SwiperSlide>
-      <SwiperSlide className={styles.mainBanner}>
+      <SwiperSlide
+        className={styles.mainBanner}
+        style={{ backgroundImage: `url(/images/HomeBanner3.png)` }}
+      >
         <div className={styles.emptyDiv}></div>
         <motion.div
           initial={{ opacity: 0 }}
