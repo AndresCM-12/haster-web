@@ -60,7 +60,7 @@ const Header = () => {
               <motion.li>CONTACTO</motion.li>
             </Link>
             <Link className="links" href={"/rastreo"}>
-              <motion.li>RASTREAR EMBARQUE</motion.li>
+              <motion.li>RASTREO DE EMBARQUES</motion.li>
             </Link>
           </ul>
         </nav>
