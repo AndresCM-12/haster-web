@@ -57,15 +57,27 @@ html {
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 140px !important;
-  height: 620px !important;
+  left: 40px !important;
   color: white !important;
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 140px !important;
-  height: 620px !important;
+  right: 40px !important;
   color: white !important;
+}
+@media screen and (max-width: 872px) {
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: 140px !important;
+    top: 750px !important;
+    color: white !important;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: 140px !important;
+    top: 750px !important;
+    color: white !important;
+  }
 }
 
 #globalHeader {
@@ -287,7 +299,7 @@ html {
       row-gap: 8px;
       margin-top: 12px;
     }
-    a{
+    a {
       text-decoration: none;
       color: $color-primary;
     }
@@ -305,7 +317,7 @@ html {
         }
       }
     }
-    .child-section{
+    .child-section {
       height: 100px;
     }
     @media screen and (max-width: 950px) {

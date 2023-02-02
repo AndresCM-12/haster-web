@@ -28,6 +28,9 @@
       color: $color-primary;
       font-weight: 700;
       margin-bottom: 20px;
+      @media screen and (max-width: 500px) {
+        font-size: 3.2rem;
+      }
     }
     h6 {
       font-size: 1.7rem;
