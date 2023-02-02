@@ -57,15 +57,15 @@ html {
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 40px;
+  left: 140px !important;
+  height: 620px !important;
   color: white !important;
-  display: none !important;
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 40px;
+  right: 140px !important;
+  height: 620px !important;
   color: white !important;
-  display: none !important;
 }
 
 #globalHeader {
@@ -287,6 +287,10 @@ html {
       row-gap: 8px;
       margin-top: 12px;
     }
+    a{
+      text-decoration: none;
+      color: $color-primary;
+    }
     .redes--sociales--wrapper {
       display: flex;
       column-gap: 20px;
@@ -300,6 +304,9 @@ html {
           height: 16px;
         }
       }
+    }
+    .child-section{
+      height: 100px;
     }
     @media screen and (max-width: 950px) {
       padding: $padding;

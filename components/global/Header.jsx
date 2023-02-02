@@ -9,7 +9,6 @@ const Header = () => {
   const [menuBackground, setMenuBackground] = useState("rgba(0,0,0,0)");
   const [menuPaddingTop, setMenuPaddingTop] = useState("40px");
   const { scrollY } = useScroll();
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
       setMenuBackground("rgba(0,0,0,0.7)");
@@ -76,7 +75,7 @@ const Header = () => {
             <p>Solicitar cotización</p>
           </div>
           <div className="right--section--wrapper--icon">
-            <div>
+            <div className="li">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -93,7 +92,16 @@ const Header = () => {
                 </g>
               </svg>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                //on click navigate to facebook
+                window.open(
+                  "https://www.facebook.com/profile.php?id=100075860441537&mibextid=ZbWKwL",
+                  "_blank"
+                );
+              }}
+              className="facebook"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24.335"
@@ -114,7 +122,7 @@ const Header = () => {
                 </g>
               </svg>
             </div>
-            <div>
+            <div className="whatsapp">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24.295"

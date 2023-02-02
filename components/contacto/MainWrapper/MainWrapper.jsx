@@ -111,7 +111,15 @@ const MainWrapper = () => {
                 </g>
               </svg>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                //on click navigate to facebook
+                window.open(
+                  "https://www.facebook.com/profile.php?id=100075860441537&mibextid=ZbWKwL",
+                  "_blank"
+                );
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24.335"

@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const router = useRouter();
   //Inner components
   const Services = () => {
     return (
@@ -39,34 +42,36 @@ const Footer = () => {
         <div>
           <h6>Nav</h6>
           <ul>
-            <li>Servicios</li>
-            <li>Nosotros</li>
-            <li>Contacto</li>
+            <Link href={"/servicios"}>
+              <li>Servicios</li>
+            </Link>
+            <Link href={"/nosotros"}>
+              <li>Nosotros</li>
+            </Link>
+            <Link href={"/contacto"}>
+              <li>Contacto</li>
+            </Link>
           </ul>
         </div>
         <div className="separator"></div>
-        <div>
+        <div className="child-section">
           <h6>Certificacion</h6>
           <ul>
             <li>ISO 9001-2015</li>
             <li>CTPAT</li>
-            <li>. </li>
           </ul>
         </div>
-        <div>
+        <div className="child-section">
           <h6>Contacto</h6>
           <ul>
             <li>Tel. [52] 61 4389 5597/98</li>
-            <li>Nosotros</li>
-            <li>Contacto</li>
+            <li>info@hasterlogis.com</li>
           </ul>
         </div>
-        <div>
+        <div className="child-section">
           <h6>Políticas de privacidad</h6>
           <ul>
             <li>Política de envíos</li>
-            <li>. </li>
-            <li>. </li>
           </ul>
         </div>
         <div className="redes--sociales--wrapper">
@@ -87,7 +92,15 @@ const Footer = () => {
               </g>
             </svg>
           </div>
-          <div>
+          <div
+            onClick={() => {
+              //on click navigate to facebook
+              window.open(
+                "https://www.facebook.com/profile.php?id=100075860441537&mibextid=ZbWKwL",
+                "_blank"
+              );
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24.335"

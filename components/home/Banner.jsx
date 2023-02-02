@@ -2,11 +2,11 @@ import { useRouter } from "next/router";
 import styles from "./HomeBanner.module.scss";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
+import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import homeBanner2 from "../../public/images/HomeBanner2.png";
-import homeBanner3 from "../../public/images/HomeBanner3.png";
+
 const HomeBanner = () => {
   const router = useRouter();
 
@@ -16,14 +16,17 @@ const HomeBanner = () => {
       className={styles.swiperWrapper}
       loop={true}
       slidesPerView={1}
+      spaceBetween={0}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{
         type: "progressbar",
       }}
+      speed={1000}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      modules={[Pagination, Navigation, Autoplay]}
     >
       <SwiperSlide className={styles.mainBanner}>
-        <div className={[styles.emptyDiv, styles.one]}></div>
+      <div className={styles.emptyDiv}></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -65,8 +68,8 @@ const HomeBanner = () => {
           className="right--text--wrapper"
         >
           <h1>
-            “OBJETIVOS PRINCIPALES
-            <br /> DE LA LOGISTICA”
+            OBJETIVOS PRINCIPALES
+            <br /> DE LA LOGISTICA
           </h1>
           <h6>
             El movimiento oportuno y económico de recursos materiales entre
@@ -97,8 +100,8 @@ const HomeBanner = () => {
           className="right--text--wrapper"
         >
           <h1>
-            “SOMOS LOS MÁS RÁPIDOS
-            <br /> Y LOS MEJORES”
+            SOMOS LOS MÁS RÁPIDOS
+            <br /> Y LOS MEJORES
           </h1>
           <h6>
             Haster Logística ofrece soluciones de transporte terrestre contando
