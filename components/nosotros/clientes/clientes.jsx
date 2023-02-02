@@ -73,8 +73,7 @@ const Clientes = () => {
           modules={[Scrollbar, A11y, FreeMode, Autoplay]}
           loop={true}
           speed={1000}
-          autoplay={{ delay: 2500 }}
-          freeMode={true}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           navigation={{ nextEl: "#nextArrow" }}
           spaceBetween={20}
           slidesPerView={"auto"}
