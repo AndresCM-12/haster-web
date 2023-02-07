@@ -140,7 +140,15 @@ const MainWrapper = () => {
                 </g>
               </svg>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                //on click navigate to facebook
+                window.open(
+                  "https://wa.me/526145359194?text=Hola,%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios",
+                  "_blank"
+                );
+              }}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24.295"
