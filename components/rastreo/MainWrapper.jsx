@@ -13,7 +13,7 @@ const MainWrapper = () => {
       >
         <div className={styles.titleWrapper}>
           <div className={styles.selected}>
-            <h1>Rastre tu envío</h1>
+            <h1>Rastrea tu embarque</h1>
           </div>
           <div>
             <h1>Cotiza con nosotros</h1>

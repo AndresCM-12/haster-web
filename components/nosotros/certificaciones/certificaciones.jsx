@@ -32,13 +32,13 @@ const Certificaciones = () => {
         <p>
           Nos comprometemos a entender y cumplir con los requerimientos de
           nuestros clientes, así como atender sus necesidades, siempre y cuando
-          estén dentro de las capacidades de Haster Logística
+          estén dentro de las capacidades de Haster Logística.
         </p>
         <br />
         <p>
-          En Haster nos comprometemos a mantener un sistema de gestión integarl
+          En Haster nos comprometemos a mantener un sistema de gestión integral
           en donde se consideran los aspectos den el fortalecimiento de la
-          seguirdad y antiterrorismo, calidad, medio ambiente y salud y
+          seguridad y antiterrorismo, calidad, medio ambiente y salud y
           seguridad en el trabajo. Nos Comprometemos con la NOM-035 en
           establecer los elementos para identificar, analizar y prevenir los
           factores de riesgo psicosocial, así como para promover un entorno

@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
         <div className="separator"></div>
         <div className="child-section">
-          <h6>Certificacion</h6>
+          <h6>Certificación</h6>
           <ul>
             <li>ISO 9001-2015</li>
             <li>CTPAT</li>

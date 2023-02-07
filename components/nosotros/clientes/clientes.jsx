@@ -42,7 +42,7 @@ const Clientes = () => {
               x1="47"
               transform="translate(1.414 8.063)"
               fill="none"
-              stroke="#2f2e64"
+              stroke="#0e186c"
               strokeWidth="2"
             />
             <path
@@ -51,7 +51,7 @@ const Clientes = () => {
               d="M230.094,3603.919l-7.387-7.387,7.387-7.387"
               transform="translate(-221.293 -3588.437)"
               fill="none"
-              stroke="#2f2e64"
+              stroke="#0e186c"
               strokeWidth="2"
             />
             <path
@@ -60,7 +60,7 @@ const Clientes = () => {
               d="M0,0"
               transform="translate(1.414 8.063)"
               fill="none"
-              stroke="#2f2e64"
+              stroke="#0e186c"
               strokeWidth="2"
             />
           </svg>
@@ -186,7 +186,7 @@ const Clientes = () => {
                 x1="47"
                 transform="translate(225.5 3596.5)"
                 fill="none"
-                stroke="#2f2e64"
+                stroke="#0e186c"
                 strokeWidth="2"
               />
               <path
@@ -195,7 +195,7 @@ const Clientes = () => {
                 d="M230.094,3603.919l-7.387-7.387,7.387-7.387"
                 transform="translate(2.793)"
                 fill="none"
-                stroke="#2f2e64"
+                stroke="#0e186c"
                 strokeWidth="2"
               />
             </g>
