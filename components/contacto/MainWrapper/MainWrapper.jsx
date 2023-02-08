@@ -77,7 +77,7 @@ const MainWrapper = () => {
               </g>
             </svg>
           </div>
-          <p>info@hasterlogis.com</p>
+          <p>info@hasterlogistic.com</p>
         </div>
 
         <div className={styles.section}>

@@ -49,7 +49,7 @@ const FormFooter = () => {
           </div>
           <div>
             <p>Tel. [52] 61 4389 5597/98</p>
-            <p>info@hasterlogis.com</p>
+            <p>info@hasterlogistic.com</p>
           </div>
         </div>
       </div>
