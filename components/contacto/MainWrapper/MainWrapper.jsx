@@ -81,7 +81,21 @@ const MainWrapper = () => {
         </div>
 
         <div className={styles.section}>
-          <div className={styles.icon}></div>
+          <div className={styles.icon}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14.075"
+              height="17.594"
+              viewBox="0 0 14.075 17.594"
+            >
+              <path
+                id="location_on_FILL1_wght400_GRAD0_opsz48"
+                d="M15.038,12.577a1.54,1.54,0,0,0,1.089-2.628,1.54,1.54,0,0,0-2.177,2.177A1.483,1.483,0,0,0,15.038,12.577Zm0,9.017A29.244,29.244,0,0,1,9.748,16,8.7,8.7,0,0,1,8,11.214a6.8,6.8,0,0,1,2.122-5.256,7.15,7.15,0,0,1,9.831,0,6.8,6.8,0,0,1,2.122,5.256A8.7,8.7,0,0,1,20.327,16,29.244,29.244,0,0,1,15.038,21.594Z"
+                transform="translate(-8 -4)"
+                fill="#c30101"
+              />
+            </svg>
+          </div>
           <p>
             <strong>Ave de las Industrias 6504-29</strong>
           </p>
@@ -89,6 +103,31 @@ const MainWrapper = () => {
             <strong>Nombre de Dios</strong>
           </p>
           <p>Chihuahua, Chih. C.P. 31150</p>
+        </div>
+
+        <div className={styles.section}>
+          <div className={styles.icon}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14.075"
+              height="17.594"
+              viewBox="0 0 14.075 17.594"
+            >
+              <path
+                id="location_on_FILL1_wght400_GRAD0_opsz48"
+                d="M15.038,12.577a1.54,1.54,0,0,0,1.089-2.628,1.54,1.54,0,0,0-2.177,2.177A1.483,1.483,0,0,0,15.038,12.577Zm0,9.017A29.244,29.244,0,0,1,9.748,16,8.7,8.7,0,0,1,8,11.214a6.8,6.8,0,0,1,2.122-5.256,7.15,7.15,0,0,1,9.831,0,6.8,6.8,0,0,1,2.122,5.256A8.7,8.7,0,0,1,20.327,16,29.244,29.244,0,0,1,15.038,21.594Z"
+                transform="translate(-8 -4)"
+                fill="#c30101"
+              />
+            </svg>
+          </div>
+          <p>
+            <strong>Santiago Troncoso No. 200 Bodega 8</strong>
+          </p>
+          <p>
+            <strong>Col. Praderas del Sur</strong>
+          </p>
+          <p>Cd. Juárez, Chih. C.P. 32575 </p>
         </div>
 
         <div className={styles.section}>
