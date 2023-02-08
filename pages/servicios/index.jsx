@@ -7,7 +7,7 @@ export default function Servicios() {
     {
       title: "Terrestre",
       type: "Transporte",
-      text: `Haster Logística ofrece soluciones de transporte terrestre en todo el territorio mexicano y el Sur de Estados Unidos de América, ofreciendo el correcto manejo de flujos de cargos terrestre desde origen hasta destino, ofreciendo servicios con valor agregado como, seguros de carga, asesoría, servicios de cross dock.`,
+      text: `Haster Logística ofrece soluciones de transporte terrestre en todo el territorio mexicano y el Sur de Estados Unidos de América, ofreciendo el correcto manejo de flujos de carga terrestre desde origen hasta destino, ofreciendo servicios con valor agregado como, seguros de carga, asesoría, servicios de cross dock.`,
       services: [
         {
           text: `Servicio Puerta a puerta.`,
@@ -60,8 +60,7 @@ export default function Servicios() {
     {
       title: "Aéreo",
       type: "Transporte",
-      text: `Transporte Aéreo de Carga Doméstica e Internacional
-      Servicio de Transportación Aérea Doméstica e Internacional eficiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. 
+      text: `Servicio de Transportación Aérea Doméstica e Internacional eficiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. 
       Una amplia base de experiencia en servicios de transportación aérea, nos permite garantizar la satisfacción de todas las necesidades de todos nuestros clientes. 
       `,
       services: [
