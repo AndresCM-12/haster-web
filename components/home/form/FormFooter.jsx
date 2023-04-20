@@ -16,18 +16,23 @@ const FormFooter = () => {
           className={styles.background}
         >
           <h1>Contáctanos</h1>
-          <form className={styles.Form}>
+          <form
+            action="https://mailthis.to/info@hasterlogis.com"
+            method="POST"
+            encType="multipart/form-data"
+            className={styles.Form}
+          >
             <label htmlFor="name">Nombre:</label>
             <input type="text" name="name" id="name" />
             <label htmlFor="company">Compañía:</label>
             <input type="text" name="company" id="company" />
             <label htmlFor="email">Email:</label>
-            <input type="text" name="email" id="email" />
+            <input type="email" name="email" id="email" />
             <label htmlFor="phone">Teléfono:</label>
             <input type="text" name="phone" id="phone" />
             <label htmlFor="message">Mensaje:</label>
             <input type="text" name="message" id="message" />
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
           </form>
         </motion.div>
       </div>

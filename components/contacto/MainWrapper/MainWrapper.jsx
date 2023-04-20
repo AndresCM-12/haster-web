@@ -217,7 +217,11 @@ const MainWrapper = () => {
 
       <div className={styles.contactWrapper}>
         <h1>Escríbenos para cualquier duda</h1>
-        <form action="none">
+        <form
+          action="https://mailthis.to/info@hasterlogis.com"
+          method="POST"
+          encType="multipart/form-data"
+        >
           <label htmlFor="name">Nombre:</label>
           <input name="name" type="text" />
 
@@ -225,14 +229,14 @@ const MainWrapper = () => {
           <input name="company" type="text" />
 
           <label htmlFor="email">Email:</label>
-          <input name="email" type="text" />
+          <input name="email" type="email" />
 
           <label htmlFor="phone">Teléfono:</label>
           <input name="phone" type="text" />
 
           <label htmlFor="message">Mensaje</label>
           <input className={styles.message} name="message" type="text" />
-          <button>Enviar</button>
+          <button type="submit">Enviar</button>
         </form>
       </div>
     </motion.div>
