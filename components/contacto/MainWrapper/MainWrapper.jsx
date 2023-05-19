@@ -1,7 +1,69 @@
+import { createRef, useEffect, useRef, useState } from "react";
 import styles from "./MainWrapper.module.scss";
 import { motion } from "framer-motion";
 
 const MainWrapper = () => {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmailToHaster = async (event) => {
+    event.preventDefault();
+    const values = {
+      "Nombre: ": name,
+      "Compañía: ": company,
+      "Email: ": email,
+      "Teléfono: ": phone,
+      "Mensaje: ": message,
+    };
+    //Convert values to string
+    const stringValues = JSON.stringify(values);
+    console.log("values ", stringValues);
+    //Send email to haster
+    const url = "https://api.sendgrid.com/v3/mail/send";
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        Authorization:
+          "Bearer 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",
+        "Content-Type": " application/json",
+      },
+      body: stringValues,
+    };
+
+    const data = {
+      personalizations: [{ to: [{ email: "info@hasterlogis.com" }] }],
+      from: { email: "info@hasterlogis.com" },
+      subject: "Test email for haster",
+      content: [
+        {
+          type: "text/plain",
+          value: "Test email for haster",
+        },
+      ],
+    };
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          Authorization:
+            "Bearer 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",
+          "Content-Type": " application/json",
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify(data),
+      });
+      const clearData = await response.json();
+
+      console.log("response ", clearData);
+    } catch (error) {
+      console.log("error ", error);
+    }
+  };
+
+  useEffect(() => {}, []);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -217,25 +279,42 @@ const MainWrapper = () => {
 
       <div className={styles.contactWrapper}>
         <h1>Escríbenos para cualquier duda</h1>
-        <form
-          action="https://mailthis.to/info@hasterlogis.com"
-          method="POST"
-          encType="multipart/form-data"
-        >
+        <form onSubmit={sendEmailToHaster}>
           <label htmlFor="name">Nombre:</label>
-          <input name="name" type="text" />
+          <input
+            onChange={(e) => setName(e.target.value)}
+            name="name"
+            type="text"
+          />
 
           <label htmlFor="company">Compañía:</label>
-          <input name="company" type="text" />
+          <input
+            onChange={(e) => setCompany(e.target.value)}
+            name="company"
+            type="text"
+          />
 
           <label htmlFor="email">Email:</label>
-          <input name="email" type="email" />
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            type="email"
+          />
 
           <label htmlFor="phone">Teléfono:</label>
-          <input name="phone" type="text" />
+          <input
+            onChange={(e) => setPhone(e.target.value)}
+            name="phone"
+            type="text"
+          />
 
           <label htmlFor="message">Mensaje</label>
-          <input className={styles.message} name="message" type="text" />
+          <input
+            onChange={(e) => setMessage(e.target.value)}
+            className={styles.message}
+            name="message"
+            type="text"
+          />
           <button type="submit">Enviar</button>
         </form>
       </div>
