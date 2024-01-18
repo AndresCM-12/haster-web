@@ -55,17 +55,18 @@ const Footer = () => {
         </div>
         <div className="separator"></div>
         <div className="child-section">
-          <h6>Certificación</h6>
+          <h6>Certificaciones</h6>
           <ul>
             <li>ISO 9001-2015</li>
             <li>CTPAT</li>
+            <li>ESR</li>
           </ul>
         </div>
         <div className="child-section">
           <h6>Contacto</h6>
           <ul>
             <li>Tel. [52] 61 4389 5597/98</li>
-            <li>info@hasterlogistic.com</li>
+            <li>info@hasterlogis.com</li>
           </ul>
         </div>
         <div className="child-section">

@@ -9,59 +9,53 @@ const MainWrapper = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  const sendEmailToHaster = async (event) => {
-    event.preventDefault();
-    const values = {
-      "Nombre: ": name,
-      "Compañía: ": company,
-      "Email: ": email,
-      "Teléfono: ": phone,
-      "Mensaje: ": message,
-    };
-    //Convert values to string
-    const stringValues = JSON.stringify(values);
-    console.log("values ", stringValues);
-    //Send email to haster
-    const url = "https://api.sendgrid.com/v3/mail/send";
-    const requestOptions = {
-      method: "POST",
-      headers: {
-        Authorization:
-          "Bearer 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",
-        "Content-Type": " application/json",
-      },
-      body: stringValues,
-    };
+  // const sendEmailToHaster = async (event) => {
+  //   event.preventDefault();
+  //   const values = {
+  //     nombre: name,
+  //     compania: company,
+  //     email: email,
+  //     telefono: phone,
+  //     mensaje: message,
+  //   };
+  //   //Convert values to string
+  //   // const stringValues = JSON.stringify(values);
+  //   // console.log("values ", stringValues);
 
-    const data = {
-      personalizations: [{ to: [{ email: "info@hasterlogis.com" }] }],
-      from: { email: "info@hasterlogis.com" },
-      subject: "Test email for haster",
-      content: [
-        {
-          type: "text/plain",
-          value: "Test email for haster",
-        },
-      ],
-    };
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          Authorization:
-            "Bearer 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",
-          "Content-Type": " application/json",
-          'Access-Control-Allow-Origin': '*',
-        },
-        body: JSON.stringify(data),
-      });
-      const clearData = await response.json();
+  //   //Send email to haster
+  //   const url = "https://send.api.mailtrap.io/api/send";
 
-      console.log("response ", clearData);
-    } catch (error) {
-      console.log("error ", error);
-    }
-  };
+  //   try {
+  //     const response = await fetch(url, {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         "Access-Control-Allow-Methods": "POST",
+  //         "Access-Control-Request-Headers": "Content-Type, Authorization",
+  //         "Api-Token": "038a314ae7e470e1ebc31ecd22cf981c",
+  //       },
+  //       body: JSON.stringify({
+  //         from: {
+  //           email: "mailtrap@hasterlogis.com",
+  //           name: "Mailtrap Test",
+  //         },
+  //         to: [
+  //           {
+  //             email: "info@hasterlogis.com",
+  //           },
+  //         ],
+  //         subject: "Solicitan Infromación",
+  //         text: `Nombre: ${values.nombre} \n Compañía: ${values.compania} \n Email: ${values.email} \n Teléfono: ${values.telefono} \n Mensaje: ${values.mensaje}`,
+  //         category: "Infromación",
+  //       }),
+  //     });
+  //     const clearData = await response.json();
+
+  //     console.log("response ", clearData);
+  //   } catch (error) {
+  //     console.log("error ", error);
+  //   }
+  // };
 
   useEffect(() => {}, []);
   return (
@@ -139,7 +133,7 @@ const MainWrapper = () => {
               </g>
             </svg>
           </div>
-          <p>info@hasterlogistic.com</p>
+          <p>info@hasterlogis.com</p>
         </div>
 
         <div className={styles.section}>
@@ -279,7 +273,7 @@ const MainWrapper = () => {
 
       <div className={styles.contactWrapper}>
         <h1>Escríbenos para cualquier duda</h1>
-        <form onSubmit={sendEmailToHaster}>
+        <form action="https://formsubmit.co/info@hasterlogis.com" method="POST">
           <label htmlFor="name">Nombre:</label>
           <input
             onChange={(e) => setName(e.target.value)}

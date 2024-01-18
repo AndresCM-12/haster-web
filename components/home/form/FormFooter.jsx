@@ -17,9 +17,8 @@ const FormFooter = () => {
         >
           <h1>Contáctanos</h1>
           <form
-            action="https://mailthis.to/info@hasterlogis.com"
+            action="https://formsubmit.co/info@hasterlogis.com"
             method="POST"
-            encType="multipart/form-data"
             className={styles.Form}
           >
             <label htmlFor="name">Nombre:</label>
@@ -54,7 +53,7 @@ const FormFooter = () => {
           </div>
           <div>
             <p>Tel. [52] 61 4389 5597/98</p>
-            <p>info@hasterlogistic.com</p>
+            <p>info@hasterlogis.com</p>
           </div>
         </div>
       </div>
