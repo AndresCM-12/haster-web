@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./intSwitch/intSwitch";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -161,7 +162,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-
+        <LanguageSwitcher />
         <div onClick={() => setMenu(!!true)} className="burger--section">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +187,7 @@ const Header = () => {
         <div className="menu--wrapper" style={styles.text}>
           <ul>
             <Link onClick={() => setMenu(!!false)} className="links" href={"/"}>
-              <li>{t('home')}</li>
+              <li>{t("home")}</li>
             </Link>
             <Link
               onClick={() => setMenu(!!false)}
@@ -214,9 +215,7 @@ const Header = () => {
               className="links"
               href={"/rastreo"}
             >
-              <li>
-                {t("shipmentTraking")}
-              </li>
+              <li>{t("shipmentTraking")}</li>
             </Link>
           </ul>
         </div>
