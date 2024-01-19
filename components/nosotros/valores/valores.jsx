@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import styles from "./valores.module.scss";
 import { motion } from "framer-motion";
 
 const Valores = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ marginTop: 0, opacity: 0 }}
@@ -94,11 +97,9 @@ const Valores = () => {
                 />
               </svg>
             </div>
-            <h5>Quienes somos</h5>
+            <h5>{t("whoAreWe")}</h5>
             <p>
-              Somos una empresa Logística, brindamos servicios de logística y
-              transporte de diveras mercancías, optimizando costos y tiempos de
-              entrega, a destinos Nacionales e Internacionales.
+              {t("weAreALogis")}
             </p>
           </div>
           <div className={styles.valor}>
@@ -163,30 +164,26 @@ const Valores = () => {
                 </g>
               </svg>
             </div>
-            <h5>Que hacemos</h5>
+            <h5>{t("whatDoWeDo")}</h5>
             <p>
-              Nos encargamos a prestar servicios de logística, transporte y
-              almacenamiento de mercancías de clientes, acordando con el cliente
-              tiempo de entrega precio y proporcionando Geo localización en
-              tiempo real de su mercancía cumpliendo con nuestros estándares de
-              calidad en nuestros servicios.
+              {t("weProvide")}
             </p>
             <br />
             <ul>
               <li>
-                <span>-</span> Consolidados.
+                <span>-</span> {t("consolidateServices")}
               </li>
               <li>
-                <span>-</span> Multimodales.
+                <span>-</span> {t("multiModalTransportation")}
               </li>
               <li>
-                <span>-</span> Dedicados.
+                <span>-</span> {t("dedicated")}
               </li>
               <li>
-                <span>-</span> Aéreos.
+                <span>-</span> {t("airTransportation")}
               </li>
               <li>
-                <span>-</span> Almacenamiento y distribución.
+                <span>-</span> {t("wareHousingAndTransportation")}
               </li>
             </ul>
           </div>
@@ -209,11 +206,9 @@ const Valores = () => {
                 />
               </svg>
             </div>
-            <h5>Misión</h5>
+            <h5>{t("mision")}</h5>
             <p>
-              Somos una empresa que brinda soluciones de logística y transporte,
-              con puntualidad, flexibilidad y seguridad, garantizando la
-              satisfacción de nuestros clientes y socios de negocios.
+              {t("weAreCompany")}
             </p>
           </div>
           <div className={styles.valor}>
@@ -233,15 +228,9 @@ const Valores = () => {
                 />
               </svg>
             </div>
-            <h5>Visión</h5>
+            <h5>{t("vision")}</h5>
             <p>
-              Ser una empresa consolidada en el mercado de la logística y el
-              transporte de mercancías a nivel internacional, operando en
-              México, Estados Unidos de América, Canadá y Europa, con equipo de
-              transporte de última generación y con heramientas de tecnología de
-              vanguardia, para proporcionar seguridad y tranquilidad a nuestros
-              clientes y socios de negocios; operado por personal altamente
-              capacitado y comprometido.
+              {t("toBeConsolidated")}
             </p>
           </div>
         </div>
@@ -276,40 +265,39 @@ const Valores = () => {
                 </g>
               </svg>
             </div>
-            <h5>Valores</h5>
-            <h6>ETICA</h6>
+            <h5>{t("ourValues")}</h5>
+            <h6>{t("ethics")}</h6>
             <p>
-              Tener un alto sentido de responsabilidad para hacer las cosas de
-              acuerdo al deber ser.
+              {t("haveAHighSense")}
             </p>
             <br />
-            <h6>COMPROMISO</h6>
+            <h6>{t("commitment")}</h6>
             <p>
-              Identificar y sentir como propios los objetivos comunes y proponer mejoras para su buen funcionamiento.
-            </p>
-            <br />
-
-            <h6>TRABAJO EN EQUIPO</h6>
-            <p>
-              Fomentar la participación de todos para lograr un objetivo común, compartiendo información y conocimientos.
+              {t("identifyAndFeel")}
             </p>
             <br />
 
-            <h6>RESPONSABILIDAD</h6>
+            <h6>{t("teamWork")}</h6>
             <p>
-              Nos comprometemos a realizar nuestro trabajo con eficiencia y puntualidad.
+              {t("encourageTheParticipation")}
             </p>
             <br />
 
-            <h6>HONESTIDAD</h6>
+            <h6>{t("responsability")}</h6>
             <p>
-              Actuar con integridad personal, equidad y transparencia en las relaciones profesionales y personales.
+              {t("weAreCommitted")}
             </p>
             <br />
 
-            <h6>LEALTAD</h6>
+            <h6>{t("honesty")}</h6>
             <p>
-              Trabajo a nuestros clientes y a la familia.
+              {t("actWithPersonalInte")}
+            </p>
+            <br />
+
+            <h6>{t("loyality")}</h6>
+            <p>
+              {t("workWith")}
             </p>
           </div>
         </div>

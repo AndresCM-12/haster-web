@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import styles from "./MainWrapper.module.scss";
 import { motion } from "framer-motion";
 
 const MainWrapper = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.mainWrapperRastreo}>
       <motion.div
@@ -13,20 +15,20 @@ const MainWrapper = () => {
       >
         <div className={styles.titleWrapper}>
           <div className={styles.selected}>
-            <h1>Rastrea tu embarque</h1>
+            <h1>{t("trackYourPackage")}</h1>
           </div>
           <div>
-            <h1>Cotiza con nosotros</h1>
+            <h1>{t("quoteWithUs")}</h1>
           </div>
         </div>
         <input
-          placeholder="Introduce hasta 30 números de rastreo, guía y/o referencia"
+          placeholder={t("enterUp")}
           type="text"
         />
-        <button>Rastrear</button>
+        <button>{t("track")}</button>
       </motion.div>
-      <p>¿Qué Es un Número de Rastreo y Dónde Puedo Encontrarlo?</p>
-      <p>¿Puedo rastrear mi embarque si no tengo un número de rastreo? </p>
+      <p>{t("whatIsATracking")}</p>
+      <p>{t("canITrack")}</p>
     </div>
   );
 };

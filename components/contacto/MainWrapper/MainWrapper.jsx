@@ -1,61 +1,10 @@
-import { createRef, useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import styles from "./MainWrapper.module.scss";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const MainWrapper = () => {
-  const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-
-  // const sendEmailToHaster = async (event) => {
-  //   event.preventDefault();
-  //   const values = {
-  //     nombre: name,
-  //     compania: company,
-  //     email: email,
-  //     telefono: phone,
-  //     mensaje: message,
-  //   };
-  //   //Convert values to string
-  //   // const stringValues = JSON.stringify(values);
-  //   // console.log("values ", stringValues);
-
-  //   //Send email to haster
-  //   const url = "https://send.api.mailtrap.io/api/send";
-
-  //   try {
-  //     const response = await fetch(url, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         "Access-Control-Allow-Methods": "POST",
-  //         "Access-Control-Request-Headers": "Content-Type, Authorization",
-  //         "Api-Token": "038a314ae7e470e1ebc31ecd22cf981c",
-  //       },
-  //       body: JSON.stringify({
-  //         from: {
-  //           email: "mailtrap@hasterlogis.com",
-  //           name: "Mailtrap Test",
-  //         },
-  //         to: [
-  //           {
-  //             email: "info@hasterlogis.com",
-  //           },
-  //         ],
-  //         subject: "Solicitan Infromación",
-  //         text: `Nombre: ${values.nombre} \n Compañía: ${values.compania} \n Email: ${values.email} \n Teléfono: ${values.telefono} \n Mensaje: ${values.mensaje}`,
-  //         category: "Infromación",
-  //       }),
-  //     });
-  //     const clearData = await response.json();
-
-  //     console.log("response ", clearData);
-  //   } catch (error) {
-  //     console.log("error ", error);
-  //   }
-  // };
+  const { t } = useTranslation();
 
   useEffect(() => {}, []);
   return (
@@ -67,7 +16,7 @@ const MainWrapper = () => {
       className={styles.mainWrapperContact}
     >
       <div className={styles.textWrapper}>
-        <h1>Contáctanos</h1>
+        <h1>{t("contactUs")}</h1>
 
         <div className={styles.section}>
           <div className={styles.icon}>
@@ -133,7 +82,7 @@ const MainWrapper = () => {
               </g>
             </svg>
           </div>
-          <p>info@hasterlogis.com</p>
+          <p>info@hasterlogistic.com</p>
         </div>
 
         <div className={styles.section}>
@@ -187,7 +136,7 @@ const MainWrapper = () => {
         </div>
 
         <div className={styles.section}>
-          <p>Búscanos en:</p>
+          <p>{t("findUsAt")}</p>
           <div className={styles.socialMedia}>
             <div>
               <svg
@@ -272,44 +221,44 @@ const MainWrapper = () => {
       </div>
 
       <div className={styles.contactWrapper}>
-        <h1>Escríbenos para cualquier duda</h1>
-        <form action="https://formsubmit.co/info@hasterlogis.com" method="POST">
-          <label htmlFor="name">Nombre:</label>
+        <h1>{t("writeUsFor")}</h1>
+        <form action="https://formsubmit.co/info@hasterlogistic.com" method="POST">
+          <label htmlFor="name">{t("name")}:</label>
           <input
             onChange={(e) => setName(e.target.value)}
             name="name"
             type="text"
           />
 
-          <label htmlFor="company">Compañía:</label>
+          <label htmlFor="company">{t("company")}:</label>
           <input
             onChange={(e) => setCompany(e.target.value)}
             name="company"
             type="text"
           />
 
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">{t("email")}:</label>
           <input
             onChange={(e) => setEmail(e.target.value)}
             name="email"
             type="email"
           />
 
-          <label htmlFor="phone">Teléfono:</label>
+          <label htmlFor="phone">{t("phone")}:</label>
           <input
             onChange={(e) => setPhone(e.target.value)}
             name="phone"
             type="text"
           />
 
-          <label htmlFor="message">Mensaje</label>
+          <label htmlFor="message">{t("message")}:</label>
           <input
             onChange={(e) => setMessage(e.target.value)}
             className={styles.message}
             name="message"
             type="text"
           />
-          <button type="submit">Enviar</button>
+          <button type="submit">{t("send")}</button>
         </form>
       </div>
     </motion.div>

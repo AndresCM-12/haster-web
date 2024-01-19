@@ -3,12 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, A11y, FreeMode, Autoplay } from "swiper";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
 import Image from "next/image";
 
 const Clientes = () => {
+  const { t } = useTranslation();
+
   const [my_swiper, set_my_swiper] = useState({});
 
   return (
@@ -20,8 +23,8 @@ const Clientes = () => {
       className={styles.mainWrapper}
     >
       <div className={styles.textWrapper}>
-        <p>Algunos de nuestros</p>
-        <h1>Clientes</h1>
+        <p>{t("someOfOurClients")}</p>
+        <h1>{t("clients")}</h1>
       </div>
       <div className={styles.clientsSwiper}>
         <div

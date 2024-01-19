@@ -1,147 +1,137 @@
 import Head from "next/head";
 import MainBanner from "../../components/servicios/MainBanner/MainBanner";
 import ServicesWrapper from "../../components/servicios/ServicesWrapper/ServicesWrapper";
+import { useTranslation } from "react-i18next";
 
 export default function Servicios() {
+  const { t } = useTranslation();
+
   const listOfServices = [
     {
-      title: "Terrestre",
-      type: "Transporte",
-      text: `Haster Logística ofrece soluciones de transporte terrestre en todo el territorio mexicano y el Sur de Estados Unidos de América, ofreciendo el correcto manejo de flujos de carga terrestre desde origen hasta destino, ofreciendo servicios con valor agregado como, seguros de carga, asesoría, servicios de cross dock.`,
+      title: t("landTrans"),
+      type: t("transportation"),
+      text: t("offersLandTrans"),
       services: [
         {
-          text: `Servicio Puerta a puerta.`,
+          text: t("doorToDoorService"),
           image: "/images/servicios/20.png",
         },
+        { text: t("fullTruckLoad"), image: "/images/servicios/11.png" },
         {
-          text: `Servicio de Carga Completa
-          (FTL).`,
-          image: "/images/servicios/11.png",
-        },
-        {
-          text: `Servicio de Carga Consolidada (LTL).`,
+          text: t("lessThanTruckLoad"),
           image: "/images/servicios/02.png",
         },
         {
-          text: `Especializado.`,
+          text: t("specialized"),
           image: "/images/servicios/22.png",
         },
         {
-          text: `Expeditado.`,
+          text: t("expedited"),
           image: "/images/servicios/05.png",
         },
         {
-          text: `Importación y Exportación Terrestre.`,
+          text: t("lanImportAndExport"),
           image: "/images/servicios/19.png",
         },
         {
-          text: `Operación y atención de Proyectos Especiales.`,
+          text: t("operationAndAttention"),
           image: "/images/servicios/01.png",
         },
+        { text: t("justInTime"), image: "/images/servicios/16.png" },
         {
-          text: `Recolección y entrega "Just in Time".`,
-          image: "/images/servicios/16.png",
-        },
-        {
-          text: `Entrega garantizada.`,
+          text: t("guarantedDelivery"),
           image: "/images/servicios/08.png",
         },
         {
-          text: `Team Time drivers.`,
+          text: t("teamTimeDrivers"),
           image: "/images/servicios/03.png",
         },
         {
-          text: `Seguro de mercancías.`,
+          text: t("merchandiseInsurance"),
           image: "/images/servicios/15.png",
         },
       ],
       secondary: false,
     },
     {
-      title: "Aéreo",
-      type: "Transporte",
-      text: `Servicio de Transportación Aérea Doméstica e Internacional eficiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. 
-      Una amplia base de experiencia en servicios de transportación aérea, nos permite garantizar la satisfacción de todas las necesidades de todos nuestros clientes. 
-      `,
+      title: t("airTrans"),
+      type:  t("transportation"),
+      text: t("domesticAndInterAir"),
       services: [
         {
-          text: `Carga Área Nacional.`,
+          text: t("domesticAreaCargo"),
           image: "/images/servicios/21.png",
         },
         {
-          text: `Carga Aérea Internacional.`,
+          text: t("internationalAreaCargo"),
           image: "/images/servicios/06.png",
         },
         {
-          text: `Vuelos Charter.`,
+          text: t("charterFlights"),
           image: "/images/servicios/00.png",
         },
         {
-          text: `Hand Carrier.`,
+          text: t("handCarrier"),
           image: "/images/servicios/07.png",
         },
         {
-          text: `Servicio Puerta-Puerta.`,
+          text: t("doorToDoorService"),
           image: "/images/servicios/17.png",
         },
         {
-          text: `Servicio Priority.`,
+          text: t("priorityService"),
           image: "/images/servicios/13.png",
         },
         {
-          text: `Next Flight Out.`,
+          text: t("nextFlightOut"),
           image: "/images/servicios/05.png",
         },
         {
-          text: `Seguro de mercancía`,
+          text: t("merchandiseInsurance"),
           image: "/images/servicios/09.png",
         },
       ],
       secondary: true,
     },
     {
-      subtitle: "Especializado de almacenaje y distribución",
-      type: "Servicio",
-      text: `Servicio especializado de Almacenaje y Distribución, con operación las 24 hrs. los 7 días de la semana.
-      Brindamos el servicio logístico de manera integral, con personal altamente capacitado y con herramientas de última tecnología. 
-      `,
+      subtitle: t("specializedWarehousing"),
+      type: t("serviceA"),
+      text: t("specializedWarehousingDist"),
       services: [
         {
-          text: `Almacenaje.`,
+          text: t("wareHousing"),
           image: "/images/servicios/25.png",
         },
         {
-          text: `Recolección de mercancías.`,
+          text: t("goodsPickUp"),
           image: "/images/servicios/18.png",
         },
         {
-          text: `Distribución y transporte.`,
+          text: t("disAndTrans"),
           image: "/images/servicios/12.png",
         },
         {
-          text: `Entregas a Clientes, unidades
-          dedicadas y consolidadas.`,
+          text: t("deliveryToClients"),
           image: "/images/servicios/04.png",
         },
         {
-          text: `Entregas a CEDIS.`,
+          text: t("deliverToDistCent"),
           image: "/images/servicios/20.png",
         },
         {
-          text: `Rutas consolidadas.`,
+          text: t("consolidatedRoutes"),
           image: "/images/servicios/03.png",
         },
         {
-          text: `Cross Docking.`,
+          text: t("crossDock"),
           image: "/images/servicios/05.png",
         },
         {
-          text: `Operaciones de descarga y
-          carga en andén.`,
+          text: t("unloadingAndLoading"),
           image: "/images/servicios/10.png",
         },
         {
-          text: `Estadía de 24 a 72 horas.`,
+          text: t("stayFrom24"),
           image: "/images/servicios/22.png",
         },
       ],
@@ -151,9 +141,9 @@ export default function Servicios() {
   return (
     <>
       <Head>
-        <title>Haster | Servicios</title>
+        <title>Haster | {t("services")}</title>
       </Head>
-      <MainBanner title={"Servicios"} url={"/images/ServiciosBanner.png"} />
+      <MainBanner title={t("services")} url={"/images/ServiciosBanner.png"} />
       {listOfServices.map((service, index) => (
         <ServicesWrapper key={index} service={service} />
       ))}
