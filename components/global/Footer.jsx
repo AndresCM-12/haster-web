@@ -2,24 +2,26 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   //Inner components
   const Services = () => {
     return (
       <div className="services">
-        <p>Fletes de importación y Exportación</p>
+        <p>{t("importAndExport")}</p>
         <p>|</p>
-        <p>Almacenamiento en bodega.</p>
+        <p>{t("wareHousing")}</p>
         <p>|</p>
-        <p>Hand Carrier</p>
+        <p>{t("handCarrier")}</p>
         <p>|</p>
-        <p>Servicio de Carga Aérea Nacional e Internacional</p>
+        <p>{t("domesticAndAir")}</p>
         <p>|</p>
-        <p>Servicio de carga FLT</p>
+        <p>{t("ftlCargoService")}</p>
         <p>|</p>
-        <p>Servicio de carga LTL</p>
+        <p>{t("ltlCargoService")}</p>
       </div>
     );
   };
@@ -43,19 +45,19 @@ const Footer = () => {
           <h6>Nav</h6>
           <ul>
             <Link href={"/servicios"}>
-              <li>Servicios</li>
+              <li>{t("service")}</li>
             </Link>
             <Link href={"/nosotros"}>
-              <li>Nosotros</li>
+              <li>{t("aboutus")}</li>
             </Link>
             <Link href={"/contacto"}>
-              <li>Contacto</li>
+              <li>{t("contact")}</li>
             </Link>
           </ul>
         </div>
         <div className="separator"></div>
         <div className="child-section">
-          <h6>Certificaciones</h6>
+          <h6>{t("certification")}</h6>
           <ul>
             <li>ISO 9001-2015</li>
             <li>CTPAT</li>
@@ -63,16 +65,16 @@ const Footer = () => {
           </ul>
         </div>
         <div className="child-section">
-          <h6>Contacto</h6>
+          <h6>{t("contactUs")}</h6>
           <ul>
             <li>Tel. [52] 61 4389 5597/98</li>
-            <li>info@hasterlogis.com</li>
+            <li>info@hasterlogistic.com</li>
           </ul>
         </div>
         <div className="child-section">
-          <h6>Políticas de privacidad</h6>
+          <h6>{t("privacyPolicy")}</h6>
           <ul>
-            <li>Política de envíos</li>
+            <li>{t("shipmentPolicy")}</li>
           </ul>
         </div>
         <div className="redes--sociales--wrapper">

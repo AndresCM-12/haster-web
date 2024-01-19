@@ -3,12 +3,16 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
   const [menuBackground, setMenuBackground] = useState("rgba(0,0,0,0)");
   const [menuPaddingTop, setMenuPaddingTop] = useState("40px");
   const { scrollY } = useScroll();
+
+  const { t } = useTranslation();
+
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
       setMenuBackground("rgba(0,0,0,0.7)");
@@ -51,16 +55,16 @@ const Header = () => {
         <nav>
           <ul>
             <Link className="links" href={"/servicios"}>
-              <motion.li>SERVICIOS</motion.li>
+              <motion.li>{t("service")}</motion.li>
             </Link>
             <Link className="links" href={"/nosotros"}>
-              <motion.li>NOSOTROS</motion.li>
+              <motion.li>{t("aboutus")}</motion.li>
             </Link>
             <Link className="links" href={"/contacto"}>
-              <motion.li>CONTACTO</motion.li>
+              <motion.li>{t("contact")}</motion.li>
             </Link>
             <Link className="links" href={"/rastreo"}>
-              <motion.li>RASTREO DE EMBARQUES</motion.li>
+              <motion.li>{t("shipmentTraking")}</motion.li>
             </Link>
           </ul>
         </nav>
@@ -72,7 +76,7 @@ const Header = () => {
               router.push("/contacto");
             }}
           >
-            <p>Solicitar cotización</p>
+            <p>{t("requestQuotation")}</p>
           </div>
           <div className="right--section--wrapper--icon">
             <div className="li">
@@ -182,28 +186,28 @@ const Header = () => {
         <div className="menu--wrapper" style={styles.text}>
           <ul>
             <Link onClick={() => setMenu(!!false)} className="links" href={"/"}>
-              <li>INICIO</li>
+              <li>{t('home')}</li>
             </Link>
             <Link
               onClick={() => setMenu(!!false)}
               className="links"
               href={"/servicios"}
             >
-              <li>SERVICIOS</li>
+              <li>{t("service")}</li>
             </Link>
             <Link
               onClick={() => setMenu(!!false)}
               className="links"
               href={"/nosotros"}
             >
-              <li>NOSOTROS</li>
+              <li>{t("aboutus")}</li>
             </Link>
             <Link
               onClick={() => setMenu(!!false)}
               className="links"
               href={"/contacto"}
             >
-              <li>CONTACTO</li>
+              <li>{t("contact")}</li>
             </Link>
             <Link
               onClick={() => setMenu(!!false)}
@@ -211,8 +215,7 @@ const Header = () => {
               href={"/rastreo"}
             >
               <li>
-                RASTREO <br /> DE <br />
-                EMBARQUES
+                {t("shipmentTraking")}
               </li>
             </Link>
           </ul>

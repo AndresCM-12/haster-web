@@ -6,9 +6,11 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useTranslation } from "react-i18next";
 
 const HomeBanner = () => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <Swiper
@@ -35,15 +37,12 @@ const HomeBanner = () => {
           className="right--text--wrapper"
         >
           <h1>
-            TU MEJOR ALIADO EN SERVICIOS
+            {t("yourBestAllay1")}
             <br />
-            DE LOGÍSTICA Y TRANSPORTE
+            {t("yourBestAllay2")}
           </h1>
           <h6>
-            La logística cubre casi todas las actividades de las organizaciones.
-            Una correcta administración de logística permite reducir
-            significativamente los costos y aumentar la competitividad en un
-            mundo globalizado.
+            {t("logisticCovers")}
           </h6>
           <div
             onClick={() => {
@@ -51,7 +50,7 @@ const HomeBanner = () => {
             }}
             className="button"
           >
-            <p>Contáctanos</p>
+            <p>{t("contactUs")}</p>
           </div>
         </motion.div>
       </SwiperSlide>
@@ -68,14 +67,13 @@ const HomeBanner = () => {
           className="right--text--wrapper"
         >
           <h1>
-            OBJETIVOS PRINCIPALES
-            <br /> DE LA LOGISTICA
+            {t("mainObjectives1")}
+            <br /> {t("mainObjectives2")}
           </h1>
           <h6>
-            El movimiento oportuno y económico de recursos materiales entre
-            etapas y lugares de trabajo. La reducción de costos.
+            {t("timelyAndEco1")}
             <br />
-            Aumentar la calidad dentro de las organizaciones.
+            {t("timelyAndEco2")}
           </h6>
           <div
             onClick={() => {
@@ -83,7 +81,7 @@ const HomeBanner = () => {
             }}
             className="button"
           >
-            <p>Contáctanos</p>
+            <p>{t("contactUs")}</p>
           </div>
         </motion.div>
       </SwiperSlide>
@@ -100,13 +98,11 @@ const HomeBanner = () => {
           className="right--text--wrapper"
         >
           <h1>
-            SOMOS LOS MÁS RÁPIDOS
-            <br /> Y LOS MEJORES
+            {t("fastestAndBest1")}
+            <br /> {t("fastestAndBest2")}
           </h1>
           <h6>
-            Haster Logística ofrece soluciones de transporte terrestre contando
-            con un experimentado equipo de trabajo a las mejores tarifas del
-            mercado.
+            {t("hasterOffers")}
           </h6>
           <div
             onClick={() => {
@@ -114,7 +110,7 @@ const HomeBanner = () => {
             }}
             className="button"
           >
-            <p>Contáctanos</p>
+            <p>{t("contactUs")}</p>
           </div>
         </motion.div>
       </SwiperSlide>

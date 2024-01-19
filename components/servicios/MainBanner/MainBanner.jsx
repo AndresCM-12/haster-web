@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import styles from "./MainBanner.module.scss";
 
 const MainBanner = ({ title, url }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div

@@ -1,8 +1,15 @@
 import Footer from "../components/global/Footer";
 import Header from "../components/global/Header";
 import "../styles/globals.scss";
+import i18n from '../i18n';
+import reacti18next from 'react-i18next';
+import { useEffect } from "react";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
+  useEffect(() => {
+    i18n.changeLanguage(i18n.language);
+  }, []);
+
   return (
     <>
       <Header />
@@ -11,3 +18,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default App;

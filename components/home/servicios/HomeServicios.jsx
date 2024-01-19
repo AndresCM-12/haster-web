@@ -3,22 +3,22 @@ import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { delay, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const HomeServicios = () => {
-  let [serviceSelected, setServiceSelected] = useState("Aéreo");
+  const { t } = useTranslation();
+
+  let [serviceSelected, setServiceSelected] = useState(0);
   const router = useRouter();
   let mainServices = {
     serviceSlideAereo: {
-      name: "Aéreo",
-      text: `Transporte Aéreo de Carga Doméstica e Internacional
-      Servicio de Transportación Aérea Doméstica e Internacional eficiente y flexible, el cual se ajusta a las distintas necesidades de operación de nuestros clientes. 
-      Una amplia base de experiencia en servicios de transportación aérea, nos permite garantizar la satisfacción de todas las necesidades de todos nuestros clientes.
-      `,
+      name: t("airTrans"),
+      text: t("domesticAndInter"),
       image: "/images/servicio_aereo.png",
     },
     serviceSlideTerrestre: {
-      name: "Terrestre",
-      text: `Haster Logística ofrece soluciones de transporte terrestre en todo el territorio mexicano y el Sur de Estados Unidos de América, ofreciendo el correcto manejo de flujos de carga terrestre desde origen hasta destino, ofreciendo servicios con valor agregado como, seguros de carga, asesoría, servicios de cross dock.`,
+      name: t("landTrans"),
+      text: t("offersLandTrans"),
       image: "/images/servicio_terrestre.png",
     },
   };
@@ -32,26 +32,28 @@ const HomeServicios = () => {
         className={styles.mainWrapperServices}
         transition={{ duration: 0.5 }}
       >
-        <h1>¿Por aire o por tierra?</h1>
+        <h1>{t("airOrLand")}</h1>
         <div
           className={styles.button}
           onClick={() => {
             router.push("/servicios");
           }}
         >
-          <p>Ver todos los servicios</p>
+          <p>{t("viewAllServices")}</p>
         </div>
         <div className={styles.servicesWrapper}>
           <TextInServiceComponent
             get={serviceSelected}
             set={setServiceSelected}
-            name={"Aéreo"}
+            name={t("airTrans")}
+            index={0}
           />
 
           <TextInServiceComponent
             get={serviceSelected}
             set={setServiceSelected}
-            name={"Terrestre"}
+            name={t("landTrans")}
+            index={1}
           />
         </div>
       </motion.div>
@@ -63,7 +65,7 @@ const HomeServicios = () => {
         transition={{ duration: 0.5 }}
         className={styles.dynamicWrapper}
       >
-        {serviceSelected === "Aéreo" ? (
+        {serviceSelected === 0 ? (
           <ServiceSlideComponent
             serviceSlide={mainServices.serviceSlideAereo}
             order={"left"}
@@ -79,13 +81,15 @@ const HomeServicios = () => {
   );
 };
 
-const TextInServiceComponent = ({ get, set, name }) => {
+const TextInServiceComponent = ({ get, set, name, index }) => {
+  const { t } = useTranslation();
+
   return (
     <div
       onClick={() => {
-        set(name);
+        set(index);
       }}
-      className={get === name ? styles.selected : styles.unSelected}
+      className={get === index ? styles.selected : styles.unSelected}
     >
       <h1>{name}</h1>
     </div>
@@ -94,6 +98,7 @@ const TextInServiceComponent = ({ get, set, name }) => {
 
 const ServiceSlideComponent = ({ serviceSlide, order }) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -140,7 +145,7 @@ const ServiceSlideComponent = ({ serviceSlide, order }) => {
                 router.push("/servicios");
               }}
             >
-              Conoce más
+             {t("learnMore")}
             </div>
           </div>
           <div className={styles.transparent}></div>
@@ -176,7 +181,7 @@ const ServiceSlideComponent = ({ serviceSlide, order }) => {
                 router.push("/servicios");
               }}
             >
-              Conoce más
+              {t("learnMore")}
             </div>
           </div>
         </div>

@@ -7,10 +7,12 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 const HomeMainServices = () => {
   const router = useRouter();
   const [my_swiper, set_my_swiper] = useState({});
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -20,14 +22,14 @@ const HomeMainServices = () => {
       transition={{ duration: 0.5 }}
       className={styles.servicesWrapper}
     >
-      <h1>Servicios</h1>
+      <h1>{t("services")}</h1>
       <div
         className={styles.button}
         onClick={() => {
           router.push("/servicios");
         }}
       >
-        Ver todos los servicios
+        {t("viewAllServices")}
       </div>
 
       <Swiper
@@ -46,8 +48,8 @@ const HomeMainServices = () => {
           <div className={styles.serviceCard}>
             <img src="/images/servicios/05.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Fletes de Importación y Exportación.</h2>
-              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
+              <h2>{t("importAndExport")}</h2>
+              <p onClick={()=>{router.push('/servicios')}}>{t("learnMore")}</p>
             </div>
           </div>
         </SwiperSlide>
@@ -55,8 +57,8 @@ const HomeMainServices = () => {
           <div className={styles.serviceCard}>
             <img src="/images/servicios/25.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Almacenamiento en bodega.</h2>
-              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
+              <h2>{t("wareHousing")}</h2>
+              <p onClick={()=>{router.push('/servicios')}}>{t("learnMore")}</p>
             </div>
           </div>
         </SwiperSlide>
@@ -64,8 +66,8 @@ const HomeMainServices = () => {
           <div className={styles.serviceCard}>
             <img src="/images/servicios/23.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Hand Carrier.</h2>
-              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
+              <h2>{t("handCarrier")}</h2>
+              <p onClick={()=>{router.push('/servicios')}}>{t("learnMore")}</p>
             </div>
           </div>
         </SwiperSlide>
@@ -73,8 +75,8 @@ const HomeMainServices = () => {
           <div className={styles.serviceCard}>
             <img src="/images/servicios/24.png" alt="camiones" />
             <div className={styles.textWrapper}>
-              <h2>Servicio de Carga Aérea Nacional e Internacional</h2>
-              <p onClick={()=>{router.push('/servicios')}}>Conoce más</p>
+              <h2>{t("domesticAndAir")}</h2>
+              <p onClick={()=>{router.push('/servicios')}}>{t("learnMore")}</p>
             </div>
           </div>
         </SwiperSlide>

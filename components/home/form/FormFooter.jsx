@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import styles from "./FormFooter.module.scss";
 import { motion } from "framer-motion";
 
 const FormFooter = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div
@@ -15,23 +18,23 @@ const FormFooter = () => {
           viewport={{ once: true }}
           className={styles.background}
         >
-          <h1>Contáctanos</h1>
+          <h1>{t("contactUs")}</h1>
           <form
-            action="https://formsubmit.co/info@hasterlogis.com"
+            action="https://formsubmit.co/info@hasterlogistic.com"
             method="POST"
             className={styles.Form}
           >
-            <label htmlFor="name">Nombre:</label>
+            <label htmlFor="name">{t("name")}:</label>
             <input type="text" name="name" id="name" />
-            <label htmlFor="company">Compañía:</label>
+            <label htmlFor="company">{t("company")}:</label>
             <input type="text" name="company" id="company" />
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">{t("email")}:</label>
             <input type="email" name="email" id="email" />
-            <label htmlFor="phone">Teléfono:</label>
+            <label htmlFor="phone">{t("phone")}:</label>
             <input type="text" name="phone" id="phone" />
-            <label htmlFor="message">Mensaje:</label>
+            <label htmlFor="message">{t("message")}:</label>
             <input type="text" name="message" id="message" />
-            <button type="submit">Enviar</button>
+            <button type="submit">{t("send")}</button>
           </form>
         </motion.div>
       </div>
@@ -53,7 +56,7 @@ const FormFooter = () => {
           </div>
           <div>
             <p>Tel. [52] 61 4389 5597/98</p>
-            <p>info@hasterlogis.com</p>
+            <p>info@hasterlogistic.com</p>
           </div>
         </div>
       </div>

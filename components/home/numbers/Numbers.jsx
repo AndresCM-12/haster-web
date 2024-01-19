@@ -3,13 +3,16 @@ import { useCountUp } from "react-countup";
 import React from "react";
 import { InView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const HomeNumbers = () => {
+  const { t } = useTranslation();
+
   const allExperienceArray = [
-    { text: "Embarques", number: 183000, duration: 2 },
-    { text: "Clientes", number: 996, duration: 2 },
-    { text: "Equipos", number: 40, duration: 1.5 },
-    { text: "Experiencia", number: 15, duration: 1 },
+    { text: t("shipments"), number: 183000, duration: 2 },
+    { text: t("clients"), number: 996, duration: 2 },
+    { text: t("equipment"), number: 40, duration: 1.5 },
+    { text: t("experience"), number: 15, duration: 1 },
   ];
 
   return (

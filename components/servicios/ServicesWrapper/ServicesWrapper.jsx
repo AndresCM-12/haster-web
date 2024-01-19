@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import styles from "./ServicesWrapper.module.scss";
 import { motion } from "framer-motion";
 
 const ServicesWrapper = ({ service }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div
