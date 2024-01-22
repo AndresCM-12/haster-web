@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
+import esrImage from "../../public/images/esr.png";
+import Image from "next/image";
 
 const Footer = () => {
   const { t } = useTranslation();
-  const router = useRouter();
-  //Inner components
   const Services = () => {
     return (
       <div className="services">
@@ -154,6 +153,16 @@ const Footer = () => {
             </svg>
           </div>
         </div>
+        <Image
+        style={{
+          width: "100px",
+          height: "100px",
+          objectFit: "contain",
+          background: "transparent",
+        }}
+        src={esrImage}
+        alt="ESR"
+      />
       </div>
     </motion.footer>
   );
