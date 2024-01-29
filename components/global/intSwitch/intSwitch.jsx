@@ -27,6 +27,7 @@ const LanguageSwitcher = () => {
         />
         <span className={styles.slider}></span>
       </label>
+      <p style={{paddingInline: "8px", fontSize: "12px", fontWeight: "bold"}}>{ i18n.language === "en" ? "ING" : "ESP" }</p>
     </div>
   );
 };
