@@ -20,7 +20,7 @@ const FormFooter = () => {
         >
           <h1>{t("contactUs")}</h1>
           <form
-            action="https://formsubmit.co/info@hasterlogistic.com"
+            action="https://formsubmit.co/info@hasterlogis.com"
             method="POST"
             className={styles.Form}
           >
@@ -55,8 +55,8 @@ const FormFooter = () => {
             <p>Chihuahua, Chih. C.P. 31150</p>
           </div>
           <div>
-            <p>Tel. [52] 61 4389 5597/98</p>
-            <p>info@hasterlogistic.com</p>
+            <p>Tel. +915 250 8619</p>
+            <p>info@hasterlogis.com</p>
           </div>
         </div>
       </div>

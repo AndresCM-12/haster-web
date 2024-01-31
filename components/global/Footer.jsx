@@ -66,8 +66,8 @@ const Footer = () => {
         <div className="child-section">
           <h6>{t("contactUs")}</h6>
           <ul>
-            <li>Tel. [52] 61 4389 5597/98</li>
-            <li>info@hasterlogistic.com</li>
+            <li>Tel. +915 250 8619</li>
+            <li>info@hasterlogis.com</li>
           </ul>
         </div>
         <div className="child-section">
