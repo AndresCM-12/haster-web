@@ -55,7 +55,7 @@ const FormFooter = () => {
             <p>Chihuahua, Chih. C.P. 31150</p>
           </div>
           <div>
-            <p>Tel. +915 250 8619</p>
+            <p>{t("phonen")}</p>
             <p>info@hasterlogis.com</p>
           </div>
         </div>

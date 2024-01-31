@@ -35,7 +35,7 @@ const MainWrapper = () => {
               />
             </svg>
           </div>
-          <p>Tel. +915 250 8619 </p>
+          <p>{t("phonen")}</p>
         </div>
 
         <div className={styles.section}>
@@ -245,7 +245,7 @@ const MainWrapper = () => {
       <div className={styles.contactWrapper}>
         <h1>{t("writeUsFor")}</h1>
         <form
-          action="https://formsubmit.co/info@hasterlogistic.com"
+          action="https://formsubmit.co/info@hasterlogis.com"
           method="POST"
         >
           <label htmlFor="name">{t("name")}:</label>
