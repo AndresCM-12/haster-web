@@ -145,8 +145,10 @@ i18n.use(initReactI18next).init({
           "Can I track my shipment if I do not have a tracking number?",
         trackYourPackage: "Track your shipment",
         enterUp: `Enter up to 30 tracking, guide and/or reference numbers.`,
-        phonen: "Tel. +915 250 8619"
-
+        phonen: "Tel. +915 250 8619",
+        direction1: "9300 Billy The Kid St. #100",
+        direction2: "El Paso. TX. C.P. 79907",
+        direction3: "EUA.",
       },
     },
     es: {
@@ -294,7 +296,10 @@ i18n.use(initReactI18next).init({
           "¿Puedo rastrear mi embarque si no tengo un número de rastreo?",
         trackYourPackage: "Rastrea tu embarque",
         enterUp: `Ingresa hasta 30 números de rastreo, guía y/o referencia.`,
-        phonen: "Tel. [52] 61 4389 5597/98"
+        phonen: "Tel. [52] 61 4389 5597/98",
+        direction1: "Ave de las industrias 6504-29",
+        direction2: "Nombre de Dios",
+        direction3: "Chihuahua, Chih. C.P. 31150",
       },
     },
   },

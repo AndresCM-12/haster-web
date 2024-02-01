@@ -50,9 +50,9 @@ const FormFooter = () => {
         <div className={styles.infoWrapper}>
           <div>
             <span className="material-symbols-outlined icon">location_on</span>
-            <h3>Ave de las industrias 6504-29</h3>
-            <h3>Nombre de Dios</h3>
-            <p>Chihuahua, Chih. C.P. 31150</p>
+            <h3>{t("direction1")}</h3>
+            <h3>{t("direction2")}</h3>
+            <p>{t("direction3")}</p>
           </div>
           <div>
             <p>{t("phonen")}</p>
